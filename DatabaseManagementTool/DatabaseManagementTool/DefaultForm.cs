@@ -15,6 +15,7 @@ namespace DatabaseManagementTool
         public DefaultForm()
         {
             InitializeComponent();
+            ScreenInformation.Text = "This is the screen where you can view all employees.";
         }
     }
 }
