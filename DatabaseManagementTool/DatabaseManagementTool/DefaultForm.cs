@@ -15,7 +15,6 @@ namespace DatabaseManagementTool
         public DefaultForm()
         {
             InitializeComponent();
-            ScreenInformation.Text = "This is the screen where you can view all employees.";
         }
 
         private void informationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,6 +31,11 @@ namespace DatabaseManagementTool
         private void SetStatusScreenText(string text)
         {
             this.StatusLabel.Text = text;
+        }
+
+        private void addEmployeesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            // To do: Add form
         }
     }
 }

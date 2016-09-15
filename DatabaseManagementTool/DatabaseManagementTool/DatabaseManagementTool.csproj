@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddEmployees.resx">
+      <DependentUpon>AddEmployees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DefaultForm.resx">
       <DependentUpon>DefaultForm.cs</DependentUpon>
     </EmbeddedResource>

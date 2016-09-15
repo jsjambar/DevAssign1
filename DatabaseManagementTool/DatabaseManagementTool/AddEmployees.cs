@@ -13,6 +13,7 @@ namespace DatabaseManagementTool
         public AddEmployees()
         {
             InitializeComponent();
+            label2.Text = "Add employees!";
         }
     }
 }

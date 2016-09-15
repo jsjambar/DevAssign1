@@ -31,13 +31,13 @@
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ScreenInformation = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.actionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ScreenInformation = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,14 +57,6 @@
             this.StatusLabel.Name = "StatusLabel";
             this.StatusLabel.Size = new System.Drawing.Size(76, 17);
             this.StatusLabel.Text = "Default Form";
-            // 
-            // ScreenInformation
-            // 
-            this.ScreenInformation.AutoSize = true;
-            this.ScreenInformation.Location = new System.Drawing.Point(27, 49);
-            this.ScreenInformation.Name = "ScreenInformation";
-            this.ScreenInformation.Size = new System.Drawing.Size(0, 13);
-            this.ScreenInformation.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -90,27 +82,37 @@
             // addEmployeesToolStripMenuItem
             // 
             this.addEmployeesToolStripMenuItem.Name = "addEmployeesToolStripMenuItem";
-            this.addEmployeesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.addEmployeesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.addEmployeesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.addEmployeesToolStripMenuItem.Text = "Add employees";
+            this.addEmployeesToolStripMenuItem.Click += new System.EventHandler(this.addEmployeesToolStripMenuItem_Click_1);
             // 
             // viewEmployeesToolStripMenuItem
             // 
             this.viewEmployeesToolStripMenuItem.Name = "viewEmployeesToolStripMenuItem";
-            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.viewEmployeesToolStripMenuItem.Text = "View employees";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
+            // 
+            // ScreenInformation
+            // 
+            this.ScreenInformation.AutoSize = true;
+            this.ScreenInformation.Location = new System.Drawing.Point(27, 49);
+            this.ScreenInformation.Name = "ScreenInformation";
+            this.ScreenInformation.Size = new System.Drawing.Size(0, 13);
+            this.ScreenInformation.TabIndex = 1;
             // 
             // DefaultForm
             // 
@@ -135,13 +137,13 @@
 
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
-        private System.Windows.Forms.Label ScreenInformation;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem actionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
+        private System.Windows.Forms.Label ScreenInformation;
     }
 }
 
