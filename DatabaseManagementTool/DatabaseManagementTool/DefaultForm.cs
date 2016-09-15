@@ -35,7 +35,7 @@ namespace DatabaseManagementTool
 
         private void addEmployeesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            // To do: Add form
+            this.ControlPlaceholder.Controls.Add(new AddEmployeeControl());
         }
     }
 }

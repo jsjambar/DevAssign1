@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEmployees.cs">
-      <SubType>Form</SubType>
+    <Compile Include="AddEmployeeControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddEmployees.Designer.cs">
-      <DependentUpon>AddEmployees.cs</DependentUpon>
+    <Compile Include="AddEmployeeControl.Designer.cs">
+      <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DefaultForm.cs">
       <SubType>Form</SubType>
@@ -60,8 +60,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddEmployees.resx">
-      <DependentUpon>AddEmployees.cs</DependentUpon>
+    <EmbeddedResource Include="AddEmployeeControl.resx">
+      <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DefaultForm.resx">
       <DependentUpon>DefaultForm.cs</DependentUpon>

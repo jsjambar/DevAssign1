@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DatabaseManagementTool
 {
-    public partial class AddEmployees : DatabaseManagementTool.DefaultForm
+    public partial class AddEmployeeControl : UserControl
     {
-        public AddEmployees()
+        public AddEmployeeControl()
         {
             InitializeComponent();
-            label2.Text = "Add employees!";
         }
     }
 }

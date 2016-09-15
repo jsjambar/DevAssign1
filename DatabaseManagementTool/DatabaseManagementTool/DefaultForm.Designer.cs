@@ -38,6 +38,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScreenInformation = new System.Windows.Forms.Label();
+            this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -114,11 +115,19 @@
             this.ScreenInformation.Size = new System.Drawing.Size(0, 13);
             this.ScreenInformation.TabIndex = 1;
             // 
+            // ControlPlaceholder
+            // 
+            this.ControlPlaceholder.Location = new System.Drawing.Point(30, 103);
+            this.ControlPlaceholder.Name = "ControlPlaceholder";
+            this.ControlPlaceholder.Size = new System.Drawing.Size(604, 228);
+            this.ControlPlaceholder.TabIndex = 3;
+            // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 381);
+            this.Controls.Add(this.ControlPlaceholder);
             this.Controls.Add(this.ScreenInformation);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -144,6 +153,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
         private System.Windows.Forms.Label ScreenInformation;
+        private System.Windows.Forms.FlowLayoutPanel ControlPlaceholder;
     }
 }
 
