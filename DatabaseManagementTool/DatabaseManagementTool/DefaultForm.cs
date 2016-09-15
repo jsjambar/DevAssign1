@@ -17,5 +17,21 @@ namespace DatabaseManagementTool
             InitializeComponent();
             ScreenInformation.Text = "This is the screen where you can view all employees.";
         }
+
+        private void informationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.SetScreenInformation("This application is an assignment for Hogeschool Rotterdam and is made by Jason Sjambar and Andy Bhadai");
+            this.SetStatusScreenText("Application information");
+        }
+
+        private void SetScreenInformation(string text)
+        {
+            this.ScreenInformation.Text = text;
+        }
+
+        private void SetStatusScreenText(string text)
+        {
+            this.StatusLabel.Text = text;
+        }
     }
 }
