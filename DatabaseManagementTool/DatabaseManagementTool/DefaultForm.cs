@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseManagementTool.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,7 +36,24 @@ namespace DatabaseManagementTool
 
         private void addEmployeesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            this.ControlPlaceholder.Controls.Add(new AddEmployeeControl());
+            this.AddControlToPlaceHolder(new AddEmployeeControl());
         }
+
+        private void createDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Database.CreateDatabase();
+        }
+
+        private void AddControlToPlaceHolder(Control Control)
+        {
+            this.ControlPlaceholder.Controls.Add(Control);
+        }
+
+        private void RemoveControlFromPlaceHolder(Control Control)
+        {
+            this.ControlPlaceholder.Controls.Remove(Control);
+        }
+
+
     }
 }

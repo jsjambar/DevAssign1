@@ -11,9 +11,14 @@ namespace DatabaseManagementTool.Classes
     {
         SQLiteConnection SQLiteConnection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
 
-        private void CreateDatabase(string file_path)
+        //public static void CreateDatabase(string file_path)
+        //{
+        //    SQLiteConnection.CreateFile($"@{file_path}");
+        //}
+
+        public static void CreateDatabase()
         {
-            SQLiteConnection.CreateFile($"@{file_path}");
+            SQLiteConnection.CreateFile("DefaultDatabase.sqlite");
         }
     }
 }

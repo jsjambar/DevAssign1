@@ -39,6 +39,8 @@
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScreenInformation = new System.Windows.Forms.Label();
             this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
+            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +76,7 @@
             this.actionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addEmployeesToolStripMenuItem,
             this.viewEmployeesToolStripMenuItem,
+            this.databaseToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.informationToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
@@ -122,6 +125,21 @@
             this.ControlPlaceholder.Size = new System.Drawing.Size(604, 228);
             this.ControlPlaceholder.TabIndex = 3;
             // 
+            // databaseToolStripMenuItem
+            // 
+            this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createDatabaseToolStripMenuItem});
+            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.databaseToolStripMenuItem.Text = "Database";
+            // 
+            // createDatabaseToolStripMenuItem
+            // 
+            this.createDatabaseToolStripMenuItem.Name = "createDatabaseToolStripMenuItem";
+            this.createDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.createDatabaseToolStripMenuItem.Text = "Create database";
+            this.createDatabaseToolStripMenuItem.Click += new System.EventHandler(this.createDatabaseToolStripMenuItem_Click);
+            // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +172,8 @@
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
         private System.Windows.Forms.Label ScreenInformation;
         private System.Windows.Forms.FlowLayoutPanel ControlPlaceholder;
+        private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createDatabaseToolStripMenuItem;
     }
 }
 

@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCountryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddCountryControl.Designer.cs">
+      <DependentUpon>AddCountryControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,6 +82,7 @@
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Database.cs" />
+    <Compile Include="Classes\Helpers.cs" />
     <Compile Include="DefaultForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +96,9 @@
     <Compile Include="Models\Roles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddCountryControl.resx">
+      <DependentUpon>AddCountryControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEmployeeControl.resx">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
