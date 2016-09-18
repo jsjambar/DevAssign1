@@ -52,6 +52,8 @@
     <Compile Include="AddEmployeeControl.Designer.cs">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Address.cs" />
+    <Compile Include="Countries.cs" />
     <Compile Include="DefaultForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,8 +61,10 @@
       <DependentUpon>DefaultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
+    <Compile Include="PostalCodes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles.cs" />
     <EmbeddedResource Include="AddEmployeeControl.resx">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
