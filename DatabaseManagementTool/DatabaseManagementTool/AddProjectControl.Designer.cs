@@ -33,6 +33,10 @@
             this.ProjectName = new System.Windows.Forms.TextBox();
             this.ProjectLocation = new System.Windows.Forms.TextBox();
             this.AddProjectButton = new System.Windows.Forms.Button();
+            this.ProjectBudget = new System.Windows.Forms.TextBox();
+            this.ProjectHours = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -77,10 +81,46 @@
             this.AddProjectButton.UseVisualStyleBackColor = true;
             this.AddProjectButton.Click += new System.EventHandler(this.AddProjectButton_Click);
             // 
+            // ProjectBudget
+            // 
+            this.ProjectBudget.Location = new System.Drawing.Point(43, 184);
+            this.ProjectBudget.Name = "ProjectBudget";
+            this.ProjectBudget.Size = new System.Drawing.Size(100, 20);
+            this.ProjectBudget.TabIndex = 5;
+            // 
+            // ProjectHours
+            // 
+            this.ProjectHours.Location = new System.Drawing.Point(203, 62);
+            this.ProjectHours.Name = "ProjectHours";
+            this.ProjectHours.Size = new System.Drawing.Size(100, 20);
+            this.ProjectHours.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(203, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Allocated hours";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(43, 165);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Budget";
+            // 
             // AddProjectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ProjectHours);
+            this.Controls.Add(this.ProjectBudget);
             this.Controls.Add(this.AddProjectButton);
             this.Controls.Add(this.ProjectLocation);
             this.Controls.Add(this.ProjectName);
@@ -100,5 +140,9 @@
         private System.Windows.Forms.TextBox ProjectName;
         private System.Windows.Forms.TextBox ProjectLocation;
         private System.Windows.Forms.Button AddProjectButton;
+        private System.Windows.Forms.TextBox ProjectBudget;
+        private System.Windows.Forms.TextBox ProjectHours;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
