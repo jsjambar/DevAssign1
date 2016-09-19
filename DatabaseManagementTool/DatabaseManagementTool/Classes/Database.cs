@@ -16,10 +16,5 @@ namespace DatabaseManagementTool.Classes
         //    SQLiteConnection.CreateFile($"@{file_path}");
         //}
 
-        public static void CreateDatabase()
-        {
-            SQLiteConnection.CreateFile("DefaultDatabase.sqlite");
-        }
-
     }
 }
