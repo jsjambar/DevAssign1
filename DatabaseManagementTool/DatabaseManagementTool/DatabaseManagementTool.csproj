@@ -81,6 +81,12 @@
     <Compile Include="AddEmployeeControl.Designer.cs">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProjectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddProjectControl.Designer.cs">
+      <DependentUpon>AddProjectControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Classes\Helpers.cs" />
     <Compile Include="DefaultForm.cs">
@@ -93,8 +99,21 @@
     <Compile Include="Models\Countries.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\PostalCodes.cs" />
+    <Compile Include="Models\Projects.cs" />
     <Compile Include="Models\Roles.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ViewEmployeesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewEmployeesControl.Designer.cs">
+      <DependentUpon>ViewEmployeesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProjectsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewProjectsControl.Designer.cs">
+      <DependentUpon>ViewProjectsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddCountryControl.resx">
       <DependentUpon>AddCountryControl.cs</DependentUpon>
@@ -102,8 +121,17 @@
     <EmbeddedResource Include="AddEmployeeControl.resx">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectControl.resx">
+      <DependentUpon>AddProjectControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DefaultForm.resx">
       <DependentUpon>DefaultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEmployeesControl.resx">
+      <DependentUpon>ViewEmployeesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProjectsControl.resx">
+      <DependentUpon>ViewProjectsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

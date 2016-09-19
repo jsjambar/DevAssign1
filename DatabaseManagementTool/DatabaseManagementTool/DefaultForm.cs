@@ -34,11 +34,6 @@ namespace DatabaseManagementTool
             this.StatusLabel.Text = text;
         }
 
-        private void addEmployeesToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.AddControlToPlaceHolder(new AddEmployeeControl());
-        }
-
         private void createDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Database.CreateDatabase();
@@ -46,6 +41,7 @@ namespace DatabaseManagementTool
 
         private void AddControlToPlaceHolder(Control Control)
         {
+            this.ControlPlaceholder.Controls.Clear();
             this.ControlPlaceholder.Controls.Add(Control);
         }
 
@@ -54,6 +50,24 @@ namespace DatabaseManagementTool
             this.ControlPlaceholder.Controls.Remove(Control);
         }
 
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddEmployeeControl());
+        }
 
+        private void viewProjectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new ViewProjectsControl());
+        }
+
+        private void addProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddProjectControl());
+        }
+
+        private void viewEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new ViewEmployeesControl());
+        }
     }
 }

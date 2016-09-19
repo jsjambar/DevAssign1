@@ -33,14 +33,16 @@
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.actionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScreenInformation = new System.Windows.Forms.Label();
             this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
-            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +76,7 @@
             // actionsToolStripMenuItem
             // 
             this.actionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addEmployeesToolStripMenuItem,
+            this.viewProjectsToolStripMenuItem,
             this.viewEmployeesToolStripMenuItem,
             this.databaseToolStripMenuItem,
             this.helpToolStripMenuItem,
@@ -83,30 +85,65 @@
             this.actionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.actionsToolStripMenuItem.Text = "Actions";
             // 
-            // addEmployeesToolStripMenuItem
+            // viewProjectsToolStripMenuItem
             // 
-            this.addEmployeesToolStripMenuItem.Name = "addEmployeesToolStripMenuItem";
-            this.addEmployeesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.addEmployeesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.addEmployeesToolStripMenuItem.Text = "Add employees";
-            this.addEmployeesToolStripMenuItem.Click += new System.EventHandler(this.addEmployeesToolStripMenuItem_Click_1);
+            this.viewProjectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addProjectToolStripMenuItem});
+            this.viewProjectsToolStripMenuItem.Name = "viewProjectsToolStripMenuItem";
+            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.viewProjectsToolStripMenuItem.Text = "View projects";
+            this.viewProjectsToolStripMenuItem.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem_Click);
+            // 
+            // addProjectToolStripMenuItem
+            // 
+            this.addProjectToolStripMenuItem.Name = "addProjectToolStripMenuItem";
+            this.addProjectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.addProjectToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.addProjectToolStripMenuItem.Text = "Add project";
+            this.addProjectToolStripMenuItem.Click += new System.EventHandler(this.addProjectToolStripMenuItem_Click);
             // 
             // viewEmployeesToolStripMenuItem
             // 
+            this.viewEmployeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addEmployeeToolStripMenuItem});
             this.viewEmployeesToolStripMenuItem.Name = "viewEmployeesToolStripMenuItem";
-            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.viewEmployeesToolStripMenuItem.Text = "View employees";
+            this.viewEmployeesToolStripMenuItem.Click += new System.EventHandler(this.viewEmployeesToolStripMenuItem_Click);
+            // 
+            // addEmployeeToolStripMenuItem
+            // 
+            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
+            this.addEmployeeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.addEmployeeToolStripMenuItem.Text = "Add employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
+            // 
+            // databaseToolStripMenuItem
+            // 
+            this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createDatabaseToolStripMenuItem});
+            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.databaseToolStripMenuItem.Text = "Database";
+            // 
+            // createDatabaseToolStripMenuItem
+            // 
+            this.createDatabaseToolStripMenuItem.Name = "createDatabaseToolStripMenuItem";
+            this.createDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.createDatabaseToolStripMenuItem.Text = "Create database";
+            this.createDatabaseToolStripMenuItem.Click += new System.EventHandler(this.createDatabaseToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
@@ -120,25 +157,10 @@
             // 
             // ControlPlaceholder
             // 
-            this.ControlPlaceholder.Location = new System.Drawing.Point(30, 103);
+            this.ControlPlaceholder.Location = new System.Drawing.Point(12, 49);
             this.ControlPlaceholder.Name = "ControlPlaceholder";
             this.ControlPlaceholder.Size = new System.Drawing.Size(604, 228);
             this.ControlPlaceholder.TabIndex = 3;
-            // 
-            // databaseToolStripMenuItem
-            // 
-            this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createDatabaseToolStripMenuItem});
-            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
-            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.databaseToolStripMenuItem.Text = "Database";
-            // 
-            // createDatabaseToolStripMenuItem
-            // 
-            this.createDatabaseToolStripMenuItem.Name = "createDatabaseToolStripMenuItem";
-            this.createDatabaseToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.createDatabaseToolStripMenuItem.Text = "Create database";
-            this.createDatabaseToolStripMenuItem.Click += new System.EventHandler(this.createDatabaseToolStripMenuItem_Click);
             // 
             // DefaultForm
             // 
@@ -166,7 +188,6 @@
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem actionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
@@ -174,6 +195,9 @@
         private System.Windows.Forms.FlowLayoutPanel ControlPlaceholder;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewProjectsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addProjectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
     }
 }
 
