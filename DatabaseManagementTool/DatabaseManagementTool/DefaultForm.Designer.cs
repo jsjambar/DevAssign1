@@ -43,6 +43,7 @@
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScreenInformation = new System.Windows.Forms.Label();
             this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
+            this.createAllTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -122,7 +123,8 @@
             // databaseToolStripMenuItem
             // 
             this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createDatabaseToolStripMenuItem});
+            this.createDatabaseToolStripMenuItem,
+            this.createAllTablesToolStripMenuItem});
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
             this.databaseToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.databaseToolStripMenuItem.Text = "Database";
@@ -162,6 +164,13 @@
             this.ControlPlaceholder.Size = new System.Drawing.Size(604, 228);
             this.ControlPlaceholder.TabIndex = 3;
             // 
+            // createAllTablesToolStripMenuItem
+            // 
+            this.createAllTablesToolStripMenuItem.Name = "createAllTablesToolStripMenuItem";
+            this.createAllTablesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.createAllTablesToolStripMenuItem.Text = "Create all tables";
+            this.createAllTablesToolStripMenuItem.Click += new System.EventHandler(this.createAllTablesToolStripMenuItem_Click);
+            // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +207,7 @@
         private System.Windows.Forms.ToolStripMenuItem viewProjectsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addProjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createAllTablesToolStripMenuItem;
     }
 }
 

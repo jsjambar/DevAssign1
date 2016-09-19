@@ -69,5 +69,10 @@ namespace DatabaseManagementTool
         {
             this.AddControlToPlaceHolder(new ViewEmployeesControl());
         }
+
+        private void createAllTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Database database = new Database();
+        }
     }
 }
