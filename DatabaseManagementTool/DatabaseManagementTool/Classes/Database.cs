@@ -21,8 +21,6 @@ namespace DatabaseManagementTool.Classes
             this.CreateRolesTable();
         }
 
-        // TODO: Implement factory design pattern?
-
         public static void CreateDatabase()
         {
             SQLiteConnection.CreateFile("DefaultDB.sqlite");

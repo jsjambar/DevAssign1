@@ -13,14 +13,14 @@ namespace DatabaseManagementTool
 {
     public partial class ViewProjectsControl : UserControl
     {
-        List<Projects> projectslist = new List<Projects>();
+        List<Project> projectslist = new List<Project>();
 
         public ViewProjectsControl()
         {
             InitializeComponent();
-            projectslist.Add(new Projects { Id = 1, Name = "Project 1", Location = "Ergens 1" });
-            projectslist.Add(new Projects { Id = 2, Name = "Project 2", Location = "Ergens 2" });
-            projectslist.Add(new Projects { Id = 3, Name = "Project 3", Location = "Ergens 3" });
+            projectslist.Add(new Project { Id = 1, Name = "Project 1", Location = "Ergens 1" });
+            projectslist.Add(new Project { Id = 2, Name = "Project 2", Location = "Ergens 2" });
+            projectslist.Add(new Project { Id = 3, Name = "Project 3", Location = "Ergens 3" });
 
             ProjectList.DisplayMember = "Name";
             ProjectList.ValueMember = "Id";

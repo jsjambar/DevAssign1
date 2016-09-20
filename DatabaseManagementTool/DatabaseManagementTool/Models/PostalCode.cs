@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseManagementTool
 {
-    public class PostalCodes
+    public class PostalCode
     {
         public int ID { get; set; }
         public string Code { get; set; }

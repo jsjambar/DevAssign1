@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatabaseManagementTool
+namespace DatabaseManagementTool.Models
 {
-    public class Countries
+    class Project
     {
-        public int ID { get; set; }
+        public int Id;
         public string Name { get; set; }
+        public string Location { get; set; }
     }
 }

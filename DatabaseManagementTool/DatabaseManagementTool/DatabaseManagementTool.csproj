@@ -96,11 +96,12 @@
       <DependentUpon>DefaultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\Countries.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\PostalCodes.cs" />
-    <Compile Include="Models\Projects.cs" />
-    <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\PostalCode.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ViewEmployeesControl.cs">
       <SubType>UserControl</SubType>
