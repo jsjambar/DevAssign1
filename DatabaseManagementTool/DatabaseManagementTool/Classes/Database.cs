@@ -14,30 +14,53 @@ namespace DatabaseManagementTool.Classes
 
         public Database()
         {
-            this.CreateEmployeeTable();
+            this.CreateEmployeesTable();
             this.CreateAddressesTable();
+            this.CreateCountriesTable();
+            this.CreatePostalCodesTable();
+            this.CreateRolesTable();
         }
+
+        // TODO: Implement factory design pattern?
 
         public static void CreateDatabase()
         {
             SQLiteConnection.CreateFile("DefaultDB.sqlite");
         }
 
-        private void CreateEmployeeTable()
+        private void CreateEmployeesTable()
         {
             string create_employee_table = "CREATE TABLE IF NOT EXISTS `employees` (`bsn` INTEGER PRIMARY KEY, `first_name` STRING NOT NULL, `last_name` STRING NOT NULL)";
 
-            this.DoSQL(create_employee_table);
+            this.Query(create_employee_table);
         }
 
         private void CreateAddressesTable()
         {
             string create_addresses_table = "CREATE TABLE IF NOT EXISTS `addresses` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` STRING NOT NULL, `street` STRING NOT NULL)";
 
-            this.DoSQL(create_addresses_table);
+            this.Query(create_addresses_table);
         }
 
-        private void DoSQL(string query)
+        private void CreateRolesTable()
+        {
+            string create_roles_table = "CREATE TABLE IF NOT EXISTS `roles` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` STRING NOT NULL)";
+            this.Query(create_roles_table);
+        }
+
+        private void CreateCountriesTable()
+        {
+            string create_country_table = "CREATE TABLE IF NOT EXISTS `countries` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` STRING NOT NULL)";
+            this.Query(create_country_table);
+        }
+
+        private void CreatePostalCodesTable()
+        {
+            string create_postal_codes = "CREATE TABLE IF NOT EXISTS `postal_codes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `code` STRING NOT NULL)";
+            this.Query(create_postal_codes);
+        }
+
+        private void Query(string query)
         {
             this.SQLiteConnection.Open();
             this.SQLiteCommand = new SQLiteCommand(query, this.SQLiteConnection);
