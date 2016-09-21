@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabaseManagementTool.Classes;
 
 namespace DatabaseManagementTool
 {
@@ -21,6 +22,9 @@ namespace DatabaseManagementTool
         {
             Country country = new Country { Name = CountryName.ToString() };
             country.Create(country);
+
+            QueryBuilder query_builder = new QueryBuilder();
+            label1.Text = query_builder.GetFullQuery();
         }
     }
 }

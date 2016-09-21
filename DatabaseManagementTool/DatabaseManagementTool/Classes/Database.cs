@@ -60,8 +60,8 @@ namespace DatabaseManagementTool.Classes
 
         public void AddCountry(Country country)
         {
-            string add_country = $"INSERT INTO `countries` (`name`) VALUES ({country.Name})";
-            this.Query(add_country);
+            //string add_country = $"INSERT INTO `countries` (`name`) VALUES ({country.Name})";
+            //this.Query(add_country);
         }
 
         private void Query(string query)

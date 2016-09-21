@@ -89,6 +89,7 @@
     </Compile>
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Classes\Helpers.cs" />
+    <Compile Include="Classes\QueryBuilder.cs" />
     <Compile Include="DefaultForm.cs">
       <SubType>Form</SubType>
     </Compile>
