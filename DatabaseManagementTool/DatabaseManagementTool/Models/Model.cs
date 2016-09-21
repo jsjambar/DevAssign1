@@ -10,23 +10,24 @@ namespace DatabaseManagementTool.Models
     // Interface for ORM-like methods
     interface IModel
     {
-        void Get(int id);
+        object Find(int id);
         void Delete(int id);
-        void Create(Object model);
-        void GetFirst();
-        void GetLast();
+        void Create(object model);
+        void Update(object model);
+        object FindAll();
+        object FindLast();
     }
 
-    class ModelFactory
-    {
-        public IModel Create(int id)
-        {
-            if(id == 1)
-            {
-                return new Employee();
-            }
+    //class ModelFactory
+    //{
+    //    public IModel Create(int id)
+    //    {
+    //        if(id == 1)
+    //        {
+    //            return new Employee();
+    //        }
 
-            throw new Exception("Model can't be found");
-        }
-    }
+    //        throw new Exception("Model can't be found");
+    //    }
+    //}
 }
