@@ -16,5 +16,11 @@ namespace DatabaseManagementTool
         {
             InitializeComponent();
         }
+
+        private void CountrySaveButton_Click(object sender, EventArgs e)
+        {
+            Country country = new Country { Name = CountryName.ToString() };
+            country.Create(country);
+        }
     }
 }

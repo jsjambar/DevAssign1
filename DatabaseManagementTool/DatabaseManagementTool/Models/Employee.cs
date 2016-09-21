@@ -13,7 +13,7 @@ namespace DatabaseManagementTool
         public string Name { get; set; }
         public string Surname { get; set; }
 
-        public void Create(Type model)
+        public void Create(object model)
         {
             throw new NotImplementedException();
         }

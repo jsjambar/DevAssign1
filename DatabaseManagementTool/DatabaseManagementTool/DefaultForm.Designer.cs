@@ -39,11 +39,17 @@
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createAllTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScreenInformation = new System.Windows.Forms.Label();
             this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
-            this.createAllTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.countryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCountriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCountriesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.postalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +87,9 @@
             this.viewEmployeesToolStripMenuItem,
             this.databaseToolStripMenuItem,
             this.helpToolStripMenuItem,
-            this.informationToolStripMenuItem});
+            this.informationToolStripMenuItem,
+            this.countryToolStripMenuItem,
+            this.postalCodesToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
             this.actionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.actionsToolStripMenuItem.Text = "Actions";
@@ -136,6 +144,13 @@
             this.createDatabaseToolStripMenuItem.Text = "Create database";
             this.createDatabaseToolStripMenuItem.Click += new System.EventHandler(this.createDatabaseToolStripMenuItem_Click);
             // 
+            // createAllTablesToolStripMenuItem
+            // 
+            this.createAllTablesToolStripMenuItem.Name = "createAllTablesToolStripMenuItem";
+            this.createAllTablesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.createAllTablesToolStripMenuItem.Text = "Create all tables";
+            this.createAllTablesToolStripMenuItem.Click += new System.EventHandler(this.createAllTablesToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
@@ -164,12 +179,48 @@
             this.ControlPlaceholder.Size = new System.Drawing.Size(604, 228);
             this.ControlPlaceholder.TabIndex = 3;
             // 
-            // createAllTablesToolStripMenuItem
+            // countryToolStripMenuItem
             // 
-            this.createAllTablesToolStripMenuItem.Name = "createAllTablesToolStripMenuItem";
-            this.createAllTablesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.createAllTablesToolStripMenuItem.Text = "Create all tables";
-            this.createAllTablesToolStripMenuItem.Click += new System.EventHandler(this.createAllTablesToolStripMenuItem_Click);
+            this.countryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCountriesToolStripMenuItem,
+            this.addCountriesToolStripMenuItem1});
+            this.countryToolStripMenuItem.Name = "countryToolStripMenuItem";
+            this.countryToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.countryToolStripMenuItem.Text = "Country";
+            // 
+            // addCountriesToolStripMenuItem
+            // 
+            this.addCountriesToolStripMenuItem.Name = "addCountriesToolStripMenuItem";
+            this.addCountriesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addCountriesToolStripMenuItem.Text = "View countries";
+            // 
+            // addCountriesToolStripMenuItem1
+            // 
+            this.addCountriesToolStripMenuItem1.Name = "addCountriesToolStripMenuItem1";
+            this.addCountriesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.addCountriesToolStripMenuItem1.Text = "Add countries";
+            this.addCountriesToolStripMenuItem1.Click += new System.EventHandler(this.addCountriesToolStripMenuItem1_Click);
+            // 
+            // postalCodesToolStripMenuItem
+            // 
+            this.postalCodesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewPostalCodesToolStripMenuItem,
+            this.addPostalCodesToolStripMenuItem});
+            this.postalCodesToolStripMenuItem.Name = "postalCodesToolStripMenuItem";
+            this.postalCodesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.postalCodesToolStripMenuItem.Text = "Postal codes";
+            // 
+            // viewPostalCodesToolStripMenuItem
+            // 
+            this.viewPostalCodesToolStripMenuItem.Name = "viewPostalCodesToolStripMenuItem";
+            this.viewPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.viewPostalCodesToolStripMenuItem.Text = "View postal codes";
+            // 
+            // addPostalCodesToolStripMenuItem
+            // 
+            this.addPostalCodesToolStripMenuItem.Name = "addPostalCodesToolStripMenuItem";
+            this.addPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.addPostalCodesToolStripMenuItem.Text = "Add postal codes";
             // 
             // DefaultForm
             // 
@@ -208,6 +259,12 @@
         private System.Windows.Forms.ToolStripMenuItem addProjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createAllTablesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem countryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCountriesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCountriesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem postalCodesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewPostalCodesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addPostalCodesToolStripMenuItem;
     }
 }
 

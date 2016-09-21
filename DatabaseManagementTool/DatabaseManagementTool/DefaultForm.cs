@@ -74,5 +74,10 @@ namespace DatabaseManagementTool
         {
             Database database = new Database();
         }
+
+        private void addCountriesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddCountryControl());
+        }
     }
 }

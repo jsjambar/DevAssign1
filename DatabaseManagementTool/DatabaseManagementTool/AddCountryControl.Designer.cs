@@ -30,6 +30,7 @@
         {
             this.AddCountryControlTitle = new System.Windows.Forms.Label();
             this.CountryName = new System.Windows.Forms.TextBox();
+            this.CountrySaveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddCountryControlTitle
@@ -48,10 +49,21 @@
             this.CountryName.Size = new System.Drawing.Size(100, 20);
             this.CountryName.TabIndex = 1;
             // 
+            // CountrySaveButton
+            // 
+            this.CountrySaveButton.Location = new System.Drawing.Point(26, 123);
+            this.CountrySaveButton.Name = "CountrySaveButton";
+            this.CountrySaveButton.Size = new System.Drawing.Size(100, 23);
+            this.CountrySaveButton.TabIndex = 2;
+            this.CountrySaveButton.Text = "Save country";
+            this.CountrySaveButton.UseVisualStyleBackColor = true;
+            this.CountrySaveButton.Click += new System.EventHandler(this.CountrySaveButton_Click);
+            // 
             // AddCountryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CountrySaveButton);
             this.Controls.Add(this.CountryName);
             this.Controls.Add(this.AddCountryControlTitle);
             this.Name = "AddCountryControl";
@@ -65,5 +77,6 @@
 
         private System.Windows.Forms.Label AddCountryControlTitle;
         private System.Windows.Forms.TextBox CountryName;
+        private System.Windows.Forms.Button CountrySaveButton;
     }
 }

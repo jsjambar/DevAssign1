@@ -58,6 +58,12 @@ namespace DatabaseManagementTool.Classes
             this.Query(create_postal_codes);
         }
 
+        public void AddCountry(Country country)
+        {
+            string add_country = $"INSERT INTO `countries` (`name`) VALUES ({country.Name})";
+            this.Query(add_country);
+        }
+
         private void Query(string query)
         {
             this.SQLiteConnection.Open();

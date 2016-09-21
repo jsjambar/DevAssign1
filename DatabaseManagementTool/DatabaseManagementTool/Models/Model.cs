@@ -12,7 +12,7 @@ namespace DatabaseManagementTool.Models
     {
         void Get(int id);
         void Delete(int id);
-        void Create(Type model);
+        void Create(Object model);
         void GetFirst();
         void GetLast();
     }
