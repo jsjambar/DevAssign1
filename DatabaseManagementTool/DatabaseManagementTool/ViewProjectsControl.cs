@@ -14,6 +14,7 @@ namespace DatabaseManagementTool
     public partial class ViewProjectsControl : UserControl
     {
         List<Project> projectslist = new List<Project>();
+        int current = 0;
 
         public ViewProjectsControl()
         {
@@ -35,6 +36,7 @@ namespace DatabaseManagementTool
             if(selectedId >= 0)
             {
                 var values = projectslist[selectedId];
+                current = values.Id;
 
                 ProjectID.Text = values.Id.ToString();
                 ProjectName.Text = values.Name.ToString();
@@ -42,6 +44,16 @@ namespace DatabaseManagementTool
                 label69.Text = values.Budget.ToString();
                 ProjectHours.Text = values.Hours.ToString();
             }
+        }
+
+        private void ProjectEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProjectDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

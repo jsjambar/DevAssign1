@@ -39,6 +39,8 @@
             this.ProjectHours = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.ProjectEdit = new System.Windows.Forms.Button();
+            this.ProjectDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProjectList
@@ -142,10 +144,32 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Budget";
             // 
+            // ProjectEdit
+            // 
+            this.ProjectEdit.Location = new System.Drawing.Point(161, 117);
+            this.ProjectEdit.Name = "ProjectEdit";
+            this.ProjectEdit.Size = new System.Drawing.Size(75, 23);
+            this.ProjectEdit.TabIndex = 11;
+            this.ProjectEdit.Text = "Edit";
+            this.ProjectEdit.UseVisualStyleBackColor = true;
+            this.ProjectEdit.Click += new System.EventHandler(this.ProjectEdit_Click);
+            // 
+            // ProjectDelete
+            // 
+            this.ProjectDelete.Location = new System.Drawing.Point(163, 147);
+            this.ProjectDelete.Name = "ProjectDelete";
+            this.ProjectDelete.Size = new System.Drawing.Size(75, 23);
+            this.ProjectDelete.TabIndex = 12;
+            this.ProjectDelete.Text = "Delete";
+            this.ProjectDelete.UseVisualStyleBackColor = true;
+            this.ProjectDelete.Click += new System.EventHandler(this.ProjectDelete_Click);
+            // 
             // ViewProjectsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ProjectDelete);
+            this.Controls.Add(this.ProjectEdit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label69);
             this.Controls.Add(this.ProjectHours);
@@ -177,5 +201,7 @@
         private System.Windows.Forms.Label ProjectHours;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button ProjectEdit;
+        private System.Windows.Forms.Button ProjectDelete;
     }
 }
