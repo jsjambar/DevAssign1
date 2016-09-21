@@ -11,7 +11,7 @@ namespace DatabaseManagementTool.Models
         public int Id;
         public string Name { get; set; }
         public string Location { get; set; }
-        public string Budget;
-        public string Hours;
+        public int Budget;
+        public int Hours;
     }
 }

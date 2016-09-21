@@ -23,17 +23,22 @@ namespace DatabaseManagementTool
             throw new NotImplementedException();
         }
 
-        public void Get(int id)
+        public object Find(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void GetFirst()
+        public object FindAll()
         {
             throw new NotImplementedException();
         }
 
-        public void GetLast()
+        public object FindLast()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(object model)
         {
             throw new NotImplementedException();
         }

@@ -18,13 +18,30 @@ namespace DatabaseManagementTool
         public ViewProjectsControl()
         {
             InitializeComponent();
-            projectslist.Add(new Project { Id = 1, Name = "Project 1", Location = "Ergens 1" });
-            projectslist.Add(new Project { Id = 2, Name = "Project 2", Location = "Ergens 2" });
-            projectslist.Add(new Project { Id = 3, Name = "Project 3", Location = "Ergens 3" });
+            projectslist.Add(new Project { Id = 1, Name = "Project 1", Location = "Ergens 1", Hours = 30, Budget = 4000 });
+            projectslist.Add(new Project { Id = 2, Name = "Project 2", Location = "Ergens 2", Hours = 20, Budget = 2000 });
+            projectslist.Add(new Project { Id = 3, Name = "Project 3", Location = "Ergens 3", Hours = 5, Budget = 50 });
 
             ProjectList.DisplayMember = "Name";
             ProjectList.ValueMember = "Id";
             ProjectList.DataSource = projectslist;
+    }
+
+        // To view the data before choosing whether you want to delete or edit
+        private void ProjectList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedId = ProjectList.SelectedIndex;
+
+            if(selectedId >= 0)
+            {
+                var values = projectslist[selectedId];
+
+                ProjectID.Text = values.Id.ToString();
+                ProjectName.Text = values.Name.ToString();
+                ProjectLocation.Text = values.Location.ToString();
+                label69.Text = values.Budget.ToString();
+                ProjectHours.Text = values.Hours.ToString();
+            }
         }
     }
 }

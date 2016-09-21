@@ -20,22 +20,27 @@ namespace DatabaseManagementTool
             Database.AddCountry(this);
         }
 
+        public object Find(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Get(int id)
+        public void Update(object model)
         {
             throw new NotImplementedException();
         }
 
-        public void GetFirst()
+        public object FindAll()
         {
             throw new NotImplementedException();
         }
 
-        public void GetLast()
+        public object FindLast()
         {
             throw new NotImplementedException();
         }
