@@ -14,6 +14,8 @@ namespace DatabaseManagementTool
     {
         string name;
         string location;
+        string budget;
+        string hours;
 
         public AddProjectControl()
         {
@@ -24,6 +26,8 @@ namespace DatabaseManagementTool
         {
             name = ProjectName.Text;
             location = ProjectLocation.Text;
+            hours = ProjectHours.Text;
+            budget = ProjectBudget.Text;
         }
     }
 }
