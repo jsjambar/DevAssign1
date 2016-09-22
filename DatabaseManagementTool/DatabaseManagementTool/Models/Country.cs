@@ -17,12 +17,19 @@ namespace DatabaseManagementTool
 
         public void Create(object model)
         {
-            Database.AddCountry(this);
         }
 
         public object Find(int id)
         {
-            throw new NotImplementedException();
+            return null;
+        }
+
+        public string DebugCountryQuery()
+        {
+            SelectQueryBuilder select_builder = new SelectQueryBuilder();
+            select_builder.Selector = "*";
+            select_builder.Column = "`country`";
+            return select_builder.GetFullQuery();
         }
 
         public void Delete(int id)
