@@ -6,29 +6,7 @@ using System.Threading.Tasks;
 
 namespace DatabaseManagementTool.Classes
 {
-    //class QueryBuilder
-    //{
-    //    string DefaultSelectQuery = $"SELECT ";
-    //    string DefaultSelector = $" * ";
-    //    string DefaultFrom = $" FROM ";
-    //    string DefaultTable = $" `employee` ";
-    //    string DefaultWhere = $" WHERE ";
-    //    string DefaultID = $" `id` = ";
-    //    string DefaultIDNumber = $" 1; ";
-
-    //    public QueryBuilder()
-    //    {
-    //        this.GetFullQuery();
-    //    }
-
-    //    public string GetFullQuery()
-    //    {
-    //        return this.DefaultSelectQuery + this.DefaultSelector + this.DefaultFrom + this.DefaultTable + this.DefaultWhere
-    //            + this.DefaultID + this.DefaultIDNumber;
-    //    }
-    //}
-
-    // Implement Decorator for QueryBuilder?
+    // Might be implemented in version 2
 
     public interface IQueryBuilderBase
     {
@@ -50,98 +28,43 @@ namespace DatabaseManagementTool.Classes
             this.QueryBuilder = query_builder;
         }
 
-        public string Query { get { return this.QueryBuilder.Query; } set { this.QueryBuilder.Query = value; } }
-        public string Selector { get { return this.QueryBuilder.Selector; } set { this.QueryBuilder.Selector = value; } }
-        public string From { get { return this.QueryBuilder.From; } set { this.QueryBuilder.From = value; } }
-        public string Table { get { return this.QueryBuilder.Table; } set { this.QueryBuilder.Table = value; } }
-        public string Where { get { return this.QueryBuilder.Where; } set { this.QueryBuilder.Where = value; } }
-        public string Column { get { return this.QueryBuilder.Column; } set { this.QueryBuilder.Column = value; } }
-        public string ID { get { return this.QueryBuilder.ID; } set { this.QueryBuilder.ID = value; } }
+        public virtual string Query { get { return this.QueryBuilder.Query; } set { this.QueryBuilder.Query = value; } }
+        public virtual string Selector { get { return this.QueryBuilder.Selector; } set { this.QueryBuilder.Selector = value; } }
+        public virtual string From { get { return this.QueryBuilder.From; } set { this.QueryBuilder.From = value; } }
+        public virtual string Table { get { return this.QueryBuilder.Table; } set { this.QueryBuilder.Table = value; } }
+        public virtual string Where { get { return this.QueryBuilder.Where; } set { this.QueryBuilder.Where = value; } }
+        public virtual string Column { get { return this.QueryBuilder.Column; } set { this.QueryBuilder.Column = value; } }
+        public virtual string ID { get { return this.QueryBuilder.ID; } set { this.QueryBuilder.ID = value; } }
     }
 
-    // TODO: Generate queries via the QueryBuilder following the Decorator design pattern
+    public class SelectQueryBuilder : QueryBuilderDecorator
+    {
+        public SelectQueryBuilder(IQueryBuilderBase query_builder_base) : base(query_builder_base)
+        {
+        }
 
-    //public class SelectQueryBuilder : IQueryBuilderBase
-    //{
-    //    public string Column
-    //    {
-    //        get
-    //        {
-    //            return Column;
-    //        }
+        public override string Query
+        {
+            get
+            {
+                return "SELECT";
+            }
+        }
 
-    //        set
-    //        {
-    //            Column = value;
-    //        }
-    //    }
+        public override string Selector
+        {
+            get
+            {
+                return "*";
+            }
+        }
 
-    //    public string From
-    //    {
-    //        get
-    //        {
-    //            return "FROM";
-    //        }
-    //    }
-
-    //    public string ID
-    //    {
-    //        get
-    //        {
-    //            return ID;
-    //        }
-
-    //        set
-    //        {
-    //            ID = value;
-    //        }
-    //    }
-
-    //    public string Query
-    //    {
-    //        get
-    //        {
-    //            return "SELECT";
-    //        }
-    //    }
-
-    //    public string Selector
-    //    {
-    //        get
-    //        {
-    //            return Selector;
-    //        }
-
-    //        set
-    //        {
-    //            Selector = value;
-    //        }
-    //    }
-
-    //    public string Table
-    //    {
-    //        get
-    //        {
-    //            return Table;
-    //        }
-
-    //        set
-    //        {
-    //            Table = value;
-    //        }
-    //    }
-
-    //    public string Where
-    //    {
-    //        get
-    //        {
-    //            return "WHERE";
-    //        }
-    //    }
-
-    //    public string GetFullQuery()
-    //    {
-    //        return $"{Query} {Selector} {From} {Table} {Where} {Column} = {ID}";
-    //    }
-    //}
+        public override string From
+        {
+            get
+            {
+                return "FROM";
+            }
+        }
+    }
 }

@@ -8,7 +8,7 @@ namespace DatabaseManagementTool.Models
 {
 
     // Interface for ORM-like methods
-    interface IModel
+    interface ORM
     {
         object Find(int id);
         void Delete(int id);
@@ -17,17 +17,4 @@ namespace DatabaseManagementTool.Models
         object FindAll();
         object FindLast();
     }
-
-    //class ModelFactory
-    //{
-    //    public IModel Create(int id)
-    //    {
-    //        if(id == 1)
-    //        {
-    //            return new Employee();
-    //        }
-
-    //        throw new Exception("Model can't be found");
-    //    }
-    //}
 }

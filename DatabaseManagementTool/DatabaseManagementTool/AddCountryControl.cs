@@ -20,11 +20,8 @@ namespace DatabaseManagementTool
 
         private void CountrySaveButton_Click(object sender, EventArgs e)
         {
-            //Country country = new Country { Name = CountryName.ToString() };
-            //country.Create(country);
-
-            Country country = new Country();
-            label1.Text = country.DebugCountryQuery().ToString();
+            Country country = new Country { Name = CountryName.Text.ToString() };
+            country.Create(country);
         }
     }
 }

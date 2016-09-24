@@ -8,14 +8,21 @@ using System.Threading.Tasks;
 
 namespace DatabaseManagementTool
 {
-    public class Country : IModel
+    public class Country : ORM
     {
         public int ID { get; set; }
         public string Name { get; set; }
 
-        Database Database = new Database();
+        Database database = new Database();
 
         public void Create(object model)
+        {
+            Country insertable_country = new Country() { Name = Name };
+            string create_country = $"INSERT INTO `countries` (`name`) VALUES (`{insertable_country.Name}`)"; ;
+            database.AddCountry(create_country);
+        }
+
+        public void Delete(int id)
         {
         }
 
@@ -24,32 +31,18 @@ namespace DatabaseManagementTool
             return null;
         }
 
-        public string DebugCountryQuery()
-        {
-            SelectQueryBuilder select_builder = new SelectQueryBuilder();
-            select_builder.Selector = "*";
-            select_builder.Column = "`country`";
-            return select_builder.GetFullQuery();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(object model)
-        {
-            throw new NotImplementedException();
-        }
-
         public object FindAll()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public object FindLast()
         {
-            throw new NotImplementedException();
+            return null;
+        }
+
+        public void Update(object model)
+        {
         }
     }
 }
