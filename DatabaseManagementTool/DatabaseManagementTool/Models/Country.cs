@@ -12,6 +12,7 @@ namespace DatabaseManagementTool
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public List<Country> CountryList = new List<Country>();
 
         Database database = new Database();
 
@@ -28,7 +29,7 @@ namespace DatabaseManagementTool
 
         public object Find(int id)
         {
-            return null;
+            string find_country = $"SELECT * FROM `countries` WHERE `id` = `{id}`";
         }
 
         public object FindAll()
