@@ -176,14 +176,14 @@
             // addCountriesToolStripMenuItem
             // 
             this.addCountriesToolStripMenuItem.Name = "addCountriesToolStripMenuItem";
-            this.addCountriesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addCountriesToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.addCountriesToolStripMenuItem.Text = "View countries";
             this.addCountriesToolStripMenuItem.Click += new System.EventHandler(this.addCountriesToolStripMenuItem_Click);
             // 
             // addCountriesToolStripMenuItem1
             // 
             this.addCountriesToolStripMenuItem1.Name = "addCountriesToolStripMenuItem1";
-            this.addCountriesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.addCountriesToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
             this.addCountriesToolStripMenuItem1.Text = "Add countries";
             this.addCountriesToolStripMenuItem1.Click += new System.EventHandler(this.addCountriesToolStripMenuItem1_Click);
             // 
@@ -220,7 +220,7 @@
             // 
             this.ControlPlaceholder.Location = new System.Drawing.Point(12, 49);
             this.ControlPlaceholder.Name = "ControlPlaceholder";
-            this.ControlPlaceholder.Size = new System.Drawing.Size(604, 228);
+            this.ControlPlaceholder.Size = new System.Drawing.Size(863, 307);
             this.ControlPlaceholder.TabIndex = 3;
             // 
             // DefaultForm

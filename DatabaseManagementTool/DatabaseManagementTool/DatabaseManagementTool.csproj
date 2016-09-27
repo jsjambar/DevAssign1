@@ -75,16 +75,16 @@
     <Compile Include="Controls\Country\AddCountryControl.Designer.cs">
       <DependentUpon>AddCountryControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEmployeeControl.cs">
+    <Compile Include="Controls\Employee\AddEmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddEmployeeControl.Designer.cs">
+    <Compile Include="Controls\Employee\AddEmployeeControl.Designer.cs">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddProjectControl.cs">
+    <Compile Include="Controls\Project\AddProjectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddProjectControl.Designer.cs">
+    <Compile Include="Controls\Project\AddProjectControl.Designer.cs">
       <DependentUpon>AddProjectControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Database.cs" />
@@ -110,35 +110,35 @@
     <Compile Include="Controls\Country\ViewCountriesControl.Designer.cs">
       <DependentUpon>ViewCountriesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewEmployeesControl.cs">
+    <Compile Include="Controls\Employee\ViewEmployeesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ViewEmployeesControl.Designer.cs">
+    <Compile Include="Controls\Employee\ViewEmployeesControl.Designer.cs">
       <DependentUpon>ViewEmployeesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewProjectsControl.cs">
+    <Compile Include="Controls\Project\ViewProjectsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ViewProjectsControl.Designer.cs">
+    <Compile Include="Controls\Project\ViewProjectsControl.Designer.cs">
       <DependentUpon>ViewProjectsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\Country\AddCountryControl.resx">
       <DependentUpon>AddCountryControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEmployeeControl.resx">
+    <EmbeddedResource Include="Controls\Employee\AddEmployeeControl.resx">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddProjectControl.resx">
+    <EmbeddedResource Include="Controls\Project\AddProjectControl.resx">
       <DependentUpon>AddProjectControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DefaultForm.resx">
       <DependentUpon>DefaultForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewEmployeesControl.resx">
+    <EmbeddedResource Include="Controls\Employee\ViewEmployeesControl.resx">
       <DependentUpon>ViewEmployeesControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewProjectsControl.resx">
+    <EmbeddedResource Include="Controls\Project\ViewProjectsControl.resx">
       <DependentUpon>ViewProjectsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -166,9 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\Address\" />
-    <Folder Include="Controls\Employee\" />
     <Folder Include="Controls\PostalCode\" />
-    <Folder Include="Controls\Project\" />
     <Folder Include="Controls\Role\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

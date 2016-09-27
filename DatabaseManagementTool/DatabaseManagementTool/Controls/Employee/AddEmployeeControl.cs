@@ -25,11 +25,8 @@ namespace DatabaseManagementTool
 
         private void CreateEmployeeButton_Click(object sender, EventArgs e)
         {
-            name = EmployeeFirstName.Text;
-            surname = EmployeeSurname.Text;
-            address = EmployeeAddress.Text;
-            education = EmployeeEducation.Text;
-            job = EmployeeJob.Text;
+            Employee employee = new Employee { BSN = Int32.Parse(EmployeeBSN.Text), Name = EmployeeFirstName.Text, Surname = EmployeeSurname.Text };
+            employee.Create(employee);
         }
     }
 }
