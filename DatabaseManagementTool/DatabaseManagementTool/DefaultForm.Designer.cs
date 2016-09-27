@@ -42,14 +42,14 @@
             this.createAllTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ScreenInformation = new System.Windows.Forms.Label();
-            this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
             this.countryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCountriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCountriesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.postalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ScreenInformation = new System.Windows.Forms.Label();
+            this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -164,21 +164,6 @@
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
-            // ScreenInformation
-            // 
-            this.ScreenInformation.AutoSize = true;
-            this.ScreenInformation.Location = new System.Drawing.Point(27, 49);
-            this.ScreenInformation.Name = "ScreenInformation";
-            this.ScreenInformation.Size = new System.Drawing.Size(0, 13);
-            this.ScreenInformation.TabIndex = 1;
-            // 
-            // ControlPlaceholder
-            // 
-            this.ControlPlaceholder.Location = new System.Drawing.Point(12, 49);
-            this.ControlPlaceholder.Name = "ControlPlaceholder";
-            this.ControlPlaceholder.Size = new System.Drawing.Size(604, 228);
-            this.ControlPlaceholder.TabIndex = 3;
-            // 
             // countryToolStripMenuItem
             // 
             this.countryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -193,6 +178,7 @@
             this.addCountriesToolStripMenuItem.Name = "addCountriesToolStripMenuItem";
             this.addCountriesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addCountriesToolStripMenuItem.Text = "View countries";
+            this.addCountriesToolStripMenuItem.Click += new System.EventHandler(this.addCountriesToolStripMenuItem_Click);
             // 
             // addCountriesToolStripMenuItem1
             // 
@@ -221,6 +207,21 @@
             this.addPostalCodesToolStripMenuItem.Name = "addPostalCodesToolStripMenuItem";
             this.addPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.addPostalCodesToolStripMenuItem.Text = "Add postal codes";
+            // 
+            // ScreenInformation
+            // 
+            this.ScreenInformation.AutoSize = true;
+            this.ScreenInformation.Location = new System.Drawing.Point(27, 49);
+            this.ScreenInformation.Name = "ScreenInformation";
+            this.ScreenInformation.Size = new System.Drawing.Size(0, 13);
+            this.ScreenInformation.TabIndex = 1;
+            // 
+            // ControlPlaceholder
+            // 
+            this.ControlPlaceholder.Location = new System.Drawing.Point(12, 49);
+            this.ControlPlaceholder.Name = "ControlPlaceholder";
+            this.ControlPlaceholder.Size = new System.Drawing.Size(604, 228);
+            this.ControlPlaceholder.TabIndex = 3;
             // 
             // DefaultForm
             // 

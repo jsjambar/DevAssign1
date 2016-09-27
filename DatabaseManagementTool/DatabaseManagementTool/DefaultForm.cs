@@ -1,4 +1,5 @@
 ﻿using DatabaseManagementTool.Classes;
+using DatabaseManagementTool.Controls.Country;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,6 +79,11 @@ namespace DatabaseManagementTool
         private void addCountriesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.AddControlToPlaceHolder(new AddCountryControl());
+        }
+
+        private void addCountriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new ViewCountriesControl());
         }
     }
 }

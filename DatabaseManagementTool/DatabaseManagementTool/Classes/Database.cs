@@ -58,7 +58,7 @@ namespace DatabaseManagementTool.Classes
             this.Query(create_postal_codes);
         }
 
-        public void AddCountry(string query)
+        public void DoQuery(string query)
         {
             this.Query(query);
         }

@@ -20,11 +20,13 @@ namespace DatabaseManagementTool
         {
             Country insertable_country = new Country() { Name = Name };
             string create_country = $"INSERT INTO `countries` (`name`) VALUES ('{insertable_country.Name}')"; ;
-            database.AddCountry(create_country);
+            database.DoQuery(create_country);
         }
 
         public void Delete(int id)
         {
+            string delete_country = $"DELECT * FROM `countries` WHERE `id` = {id}";
+            database.DoQuery(delete_country);
         }
 
         public object Find(int id)

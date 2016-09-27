@@ -69,10 +69,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCountryControl.cs">
+    <Compile Include="Controls\Country\AddCountryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddCountryControl.Designer.cs">
+    <Compile Include="Controls\Country\AddCountryControl.Designer.cs">
       <DependentUpon>AddCountryControl.cs</DependentUpon>
     </Compile>
     <Compile Include="AddEmployeeControl.cs">
@@ -104,6 +104,12 @@
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Controls\Country\ViewCountriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Country\ViewCountriesControl.Designer.cs">
+      <DependentUpon>ViewCountriesControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewEmployeesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,7 +123,7 @@
       <DependentUpon>ViewProjectsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddCountryControl.resx">
+    <EmbeddedResource Include="Controls\Country\AddCountryControl.resx">
       <DependentUpon>AddCountryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddEmployeeControl.resx">
@@ -158,7 +164,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controls\Address\" />
+    <Folder Include="Controls\Employee\" />
+    <Folder Include="Controls\PostalCode\" />
+    <Folder Include="Controls\Project\" />
+    <Folder Include="Controls\Role\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.103\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.103\build\net451\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
