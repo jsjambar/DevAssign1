@@ -19,7 +19,7 @@ namespace DatabaseManagementTool
         public void Create(object model)
         {
             Country insertable_country = new Country() { Name = Name };
-            string create_country = $"INSERT INTO `countries` (`name`) VALUES (`{insertable_country.Name}`)"; ;
+            string create_country = $"INSERT INTO `countries` (`name`) VALUES ('{insertable_country.Name}')"; ;
             database.AddCountry(create_country);
         }
 
@@ -29,7 +29,11 @@ namespace DatabaseManagementTool
 
         public object Find(int id)
         {
-            string find_country = $"SELECT * FROM `countries` WHERE `id` = `{id}`";
+            string find_country = $"SELECT * FROM `countries` WHERE `id` = {id}";
+            Database.Select(find_country);
+
+            Country found_country = new Country { };
+            return null;
         }
 
         public object FindAll()

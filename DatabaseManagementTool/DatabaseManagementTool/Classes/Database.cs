@@ -72,16 +72,22 @@ namespace DatabaseManagementTool.Classes
         }
 
         // Different models have different properties, need to resolve this
-        public static void Select(string select_query, List<object> model)
+        public static string Select(string select_query)
         {
             SQLiteConnection sqlite_connection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
             sqlite_connection.Open();
             SQLiteCommand sqlite_command = new SQLiteCommand(select_query, sqlite_connection);
             SQLiteDataReader sql_data_reader = sqlite_command.ExecuteReader();
+            string table_name = "";
 
             while (sql_data_reader.Read())
             {
+                table_name = sql_data_reader.GetTableName(0);
             }
+
+            return table_name;
+
+            sqlite_connection.Close();
         }
     }
 }
