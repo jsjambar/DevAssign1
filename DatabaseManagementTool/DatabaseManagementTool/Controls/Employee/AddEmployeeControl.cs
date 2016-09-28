@@ -12,12 +12,6 @@ namespace DatabaseManagementTool
 {
     public partial class AddEmployeeControl : UserControl
     {
-        string name;
-        string surname;
-        string address;
-        string education;
-        string job;
-
         public AddEmployeeControl()
         {
             InitializeComponent();
@@ -27,6 +21,10 @@ namespace DatabaseManagementTool
         {
             Employee employee = new Employee { BSN = Int32.Parse(EmployeeBSN.Text), Name = EmployeeFirstName.Text, Surname = EmployeeSurname.Text };
             employee.Create(employee);
+
+            EmployeeBSN.Text = "";
+            EmployeeFirstName.Text = "";
+            EmployeeSurname.Text = "";
         }
     }
 }

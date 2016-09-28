@@ -20,13 +20,13 @@ namespace DatabaseManagementTool
         {
             Country insertable_country = new Country() { Name = Name };
             string create_country = $"INSERT INTO `countries` (`name`) VALUES ('{insertable_country.Name}')"; ;
-            database.DoQuery(create_country);
+            this.database.DoQuery(create_country);
         }
 
         public void Delete(int id)
         {
-            string delete_country = $"DELECT * FROM `countries` WHERE `id` = {id}";
-            database.DoQuery(delete_country);
+            string delete_country = $"DELETE * FROM `countries` WHERE `id` = {id}";
+            this.database.DoQuery(delete_country);
         }
 
         public object Find(int id)
@@ -50,6 +50,9 @@ namespace DatabaseManagementTool
 
         public void Update(object model)
         {
+            Country updated_country = new Country { Name = Name };
+            string update_country = $"UPDATE `countries` SET `name` = '{updated_country.Name}' WHERE `id` = {updated_country.ID}";
+            this.database.DoQuery(update_country);
         }
     }
 }

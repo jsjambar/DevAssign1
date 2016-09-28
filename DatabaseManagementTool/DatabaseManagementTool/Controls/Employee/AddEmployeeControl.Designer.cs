@@ -42,12 +42,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.EmployeeBSN = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.feedbackControl1 = new DatabaseManagementTool.FeedbackControl();
             this.SuspendLayout();
             // 
             // AddEmployeeControlTitle
             // 
             this.AddEmployeeControlTitle.AutoSize = true;
-            this.AddEmployeeControlTitle.Location = new System.Drawing.Point(37, 38);
+            this.AddEmployeeControlTitle.Location = new System.Drawing.Point(30, 13);
             this.AddEmployeeControlTitle.Name = "AddEmployeeControlTitle";
             this.AddEmployeeControlTitle.Size = new System.Drawing.Size(93, 13);
             this.AddEmployeeControlTitle.TabIndex = 0;
@@ -55,21 +56,21 @@
             // 
             // EmployeeFirstName
             // 
-            this.EmployeeFirstName.Location = new System.Drawing.Point(34, 143);
+            this.EmployeeFirstName.Location = new System.Drawing.Point(27, 118);
             this.EmployeeFirstName.Name = "EmployeeFirstName";
             this.EmployeeFirstName.Size = new System.Drawing.Size(100, 20);
             this.EmployeeFirstName.TabIndex = 1;
             // 
             // EmployeeSurname
             // 
-            this.EmployeeSurname.Location = new System.Drawing.Point(34, 189);
+            this.EmployeeSurname.Location = new System.Drawing.Point(27, 164);
             this.EmployeeSurname.Name = "EmployeeSurname";
             this.EmployeeSurname.Size = new System.Drawing.Size(100, 20);
             this.EmployeeSurname.TabIndex = 2;
             // 
             // CreateEmployeeButton
             // 
-            this.CreateEmployeeButton.Location = new System.Drawing.Point(172, 239);
+            this.CreateEmployeeButton.Location = new System.Drawing.Point(165, 214);
             this.CreateEmployeeButton.Name = "CreateEmployeeButton";
             this.CreateEmployeeButton.Size = new System.Drawing.Size(75, 23);
             this.CreateEmployeeButton.TabIndex = 3;
@@ -79,21 +80,21 @@
             // 
             // EmployeeAddress
             // 
-            this.EmployeeAddress.Location = new System.Drawing.Point(34, 239);
+            this.EmployeeAddress.Location = new System.Drawing.Point(27, 214);
             this.EmployeeAddress.Name = "EmployeeAddress";
             this.EmployeeAddress.Size = new System.Drawing.Size(100, 20);
             this.EmployeeAddress.TabIndex = 4;
             // 
             // EmployeeEducation
             // 
-            this.EmployeeEducation.Location = new System.Drawing.Point(172, 143);
+            this.EmployeeEducation.Location = new System.Drawing.Point(165, 118);
             this.EmployeeEducation.Name = "EmployeeEducation";
             this.EmployeeEducation.Size = new System.Drawing.Size(100, 20);
             this.EmployeeEducation.TabIndex = 5;
             // 
             // EmployeeJob
             // 
-            this.EmployeeJob.Location = new System.Drawing.Point(172, 193);
+            this.EmployeeJob.Location = new System.Drawing.Point(165, 168);
             this.EmployeeJob.Name = "EmployeeJob";
             this.EmployeeJob.Size = new System.Drawing.Size(100, 20);
             this.EmployeeJob.TabIndex = 6;
@@ -101,7 +102,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 124);
+            this.label1.Location = new System.Drawing.Point(27, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 7;
@@ -110,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 170);
+            this.label2.Location = new System.Drawing.Point(27, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 8;
@@ -119,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 220);
+            this.label3.Location = new System.Drawing.Point(30, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 9;
@@ -128,7 +129,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(172, 124);
+            this.label4.Location = new System.Drawing.Point(165, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 10;
@@ -137,7 +138,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(175, 174);
+            this.label5.Location = new System.Drawing.Point(168, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 13);
             this.label5.TabIndex = 11;
@@ -145,7 +146,7 @@
             // 
             // EmployeeBSN
             // 
-            this.EmployeeBSN.Location = new System.Drawing.Point(34, 91);
+            this.EmployeeBSN.Location = new System.Drawing.Point(27, 66);
             this.EmployeeBSN.Name = "EmployeeBSN";
             this.EmployeeBSN.Size = new System.Drawing.Size(100, 20);
             this.EmployeeBSN.TabIndex = 12;
@@ -153,16 +154,24 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 66);
+            this.label6.Location = new System.Drawing.Point(30, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 13);
             this.label6.TabIndex = 13;
             this.label6.Text = "BSN";
             // 
+            // feedbackControl1
+            // 
+            this.feedbackControl1.Location = new System.Drawing.Point(16, 255);
+            this.feedbackControl1.Name = "feedbackControl1";
+            this.feedbackControl1.Size = new System.Drawing.Size(249, 97);
+            this.feedbackControl1.TabIndex = 14;
+            // 
             // AddEmployeeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.feedbackControl1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.EmployeeBSN);
             this.Controls.Add(this.label5);
@@ -178,7 +187,7 @@
             this.Controls.Add(this.EmployeeFirstName);
             this.Controls.Add(this.AddEmployeeControlTitle);
             this.Name = "AddEmployeeControl";
-            this.Size = new System.Drawing.Size(574, 349);
+            this.Size = new System.Drawing.Size(377, 333);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +209,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox EmployeeBSN;
         private System.Windows.Forms.Label label6;
+        private FeedbackControl feedbackControl1;
     }
 }

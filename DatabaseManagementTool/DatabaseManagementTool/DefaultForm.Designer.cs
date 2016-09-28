@@ -58,9 +58,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 359);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 409);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(887, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1000, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -76,7 +76,7 @@
             this.actionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(887, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1000, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -220,14 +220,14 @@
             // 
             this.ControlPlaceholder.Location = new System.Drawing.Point(12, 49);
             this.ControlPlaceholder.Name = "ControlPlaceholder";
-            this.ControlPlaceholder.Size = new System.Drawing.Size(863, 307);
+            this.ControlPlaceholder.Size = new System.Drawing.Size(819, 292);
             this.ControlPlaceholder.TabIndex = 3;
             // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 381);
+            this.ClientSize = new System.Drawing.Size(1000, 431);
             this.Controls.Add(this.ControlPlaceholder);
             this.Controls.Add(this.ScreenInformation);
             this.Controls.Add(this.statusStrip1);

@@ -25,7 +25,8 @@ namespace DatabaseManagementTool
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            string delete_employee = $"DELETE * FROM `employees` WHERE `id` = {id}";
+            this.database.DoQuery(delete_employee);
         }
 
         public object Find(int id)
@@ -45,7 +46,9 @@ namespace DatabaseManagementTool
 
         public void Update(object model)
         {
-            throw new NotImplementedException();
+            Employee updated_employee = new Employee { BSN = BSN, Name = Name, Surname = Surname };
+            string update_employee = $"UPDATE `employees` SET `bsn` = {updated_employee.BSN}, `first_name` = '{updated_employee.Name}', `last_name` = '{updated_employee.Surname}'";
+            this.database.DoQuery(update_employee);
         }
     }
 }
