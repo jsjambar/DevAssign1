@@ -19,9 +19,13 @@ namespace DatabaseManagementTool
         {
             InitializeComponent();
 
-            employeeslist.Add(new Employee { BSN = 1, Name = "Ginny", Surname = "Weet ik niet" });
-            employeeslist.Add(new Employee { BSN = 1, Name = "Harry", Surname = "Weet ik niet 2" });
-            employeeslist.Add(new Employee { BSN = 1, Name = "Bart", Surname = "Weet ik niet 3" });
+            Employee oEmployee = new Employee();
+            List<Employee> employees = (List<Employee>)oEmployee.FindAll();
+
+            foreach (Employee employee in employees)
+            {
+                employeeslist.Add(new Employee { BSN = employee.BSN, Name = employee.Name, Surname = employee.Surname });
+            }
 
             EmployeesList.DisplayMember = "Name";
             EmployeesList.ValueMember = "BSN";
