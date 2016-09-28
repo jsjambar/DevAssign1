@@ -52,7 +52,9 @@ namespace DatabaseManagementTool
 
         public void Update(object model)
         {
-            throw new NotImplementedException();
+            Employee employee = (Employee)model;
+            string update_employee = $"UPDATE `employees` SET `first_name` = {employee.Name}, `last_name` = {employee.Surname} WHERE `bsn` = '{employee.BSN}'";
+            database.DoQuery(update_employee);
         }
     }
 }
