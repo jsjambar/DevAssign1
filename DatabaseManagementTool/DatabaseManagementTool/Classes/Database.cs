@@ -28,7 +28,7 @@ namespace DatabaseManagementTool.Classes
 
         private void CreateEmployeesTable()
         {
-            string create_employee_table = "CREATE TABLE IF NOT EXISTS `employees` (`bsn` INTEGER PRIMARY KEY, `first_name` STRING NOT NULL, `last_name` STRING NOT NULL)";
+            string create_employee_table = "CREATE TABLE IF NOT EXISTS `employees` (`bsn` INTEGER PRIMARY KEY, `first_name` STRING NOT NULL, `last_name` STRING NOT NULL, `boolean_deleted` BOOLEAN not null default 0)";
 
             this.Query(create_employee_table);
         }
@@ -88,6 +88,24 @@ namespace DatabaseManagementTool.Classes
             return table_name;
 
             sqlite_connection.Close();
+        }
+
+        public List<Employee> employeeQuery (string sQuery)
+        {
+            SQLiteConnection sqlite_connection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
+            sqlite_connection.Open();
+
+            List<Employee> values = new List<Employee>();
+
+            SQLiteCommand command = new SQLiteCommand(sQuery, sqlite_connection);
+            SQLiteDataReader result = command.ExecuteReader();
+            while (result.Read())
+            {
+                values.Add(new Employee { BSN = Convert.ToInt32(result["bsn"]), Name = result["first_name"].ToString(), Surname = result["last_name"].ToString() });
+            }
+
+            return values;
+
         }
     }
 }

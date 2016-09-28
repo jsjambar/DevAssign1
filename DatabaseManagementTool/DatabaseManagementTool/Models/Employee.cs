@@ -23,19 +23,26 @@ namespace DatabaseManagementTool
             database.DoQuery(create_employee);
         }
 
-        public void Delete(int id)
+        public void Delete(int bsn)
         {
-            throw new NotImplementedException();
+            string delete_employee = $"UPDATE `employees` SET `boolean_deleted` = 1 WHERE `bsn` = '{bsn}'";
+            database.DoQuery(delete_employee);
         }
 
-        public object Find(int id)
+        public object Find(int bsn)
         {
-            throw new NotImplementedException();
+            string find_employee = $"SELECT * FROM `employees` WHERE `boolean_deleted` = 0 and `bsn` = {bsn}";
+            List<Employee> employees = database.employeeQuery(find_employee);
+
+            return employees;
         }
 
         public object FindAll()
         {
-            throw new NotImplementedException();
+            string getall_employee = "SELECT * FROM `employees`";
+            List<Employee> employees = database.employeeQuery(getall_employee);
+
+            return employees;
         }
 
         public object FindLast()
