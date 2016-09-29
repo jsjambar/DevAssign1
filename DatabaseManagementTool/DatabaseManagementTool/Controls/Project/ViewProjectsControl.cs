@@ -41,7 +41,7 @@ namespace DatabaseManagementTool
                 ProjectID.Text = values.Id.ToString();
                 ProjectName.Text = values.Name.ToString();
                 ProjectLocation.Text = values.Location.ToString();
-                label69.Text = values.Budget.ToString();
+                ProjectBudget.Text = values.Budget.ToString();
                 ProjectHours.Text = values.Hours.ToString();
             }
         }

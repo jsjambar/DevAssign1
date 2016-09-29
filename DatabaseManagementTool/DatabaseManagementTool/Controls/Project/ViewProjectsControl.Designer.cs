@@ -37,7 +37,7 @@
             this.ProjectLocation = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ProjectHours = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
+            this.ProjectBudget = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ProjectEdit = new System.Windows.Forms.Button();
             this.ProjectDelete = new System.Windows.Forms.Button();
@@ -126,14 +126,14 @@
             this.ProjectHours.TabIndex = 8;
             this.ProjectHours.Text = "Hours";
             // 
-            // label69
+            // ProjectBudget
             // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(244, 85);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(41, 13);
-            this.label69.TabIndex = 9;
-            this.label69.Text = "Budget";
+            this.ProjectBudget.AutoSize = true;
+            this.ProjectBudget.Location = new System.Drawing.Point(244, 85);
+            this.ProjectBudget.Name = "ProjectBudget";
+            this.ProjectBudget.Size = new System.Drawing.Size(41, 13);
+            this.ProjectBudget.TabIndex = 9;
+            this.ProjectBudget.Text = "Budget";
             // 
             // label4
             // 
@@ -171,7 +171,7 @@
             this.Controls.Add(this.ProjectDelete);
             this.Controls.Add(this.ProjectEdit);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label69);
+            this.Controls.Add(this.ProjectBudget);
             this.Controls.Add(this.ProjectHours);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ProjectLocation);
@@ -199,7 +199,7 @@
         private System.Windows.Forms.Label ProjectLocation;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ProjectHours;
-        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label ProjectBudget;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ProjectEdit;
         private System.Windows.Forms.Button ProjectDelete;

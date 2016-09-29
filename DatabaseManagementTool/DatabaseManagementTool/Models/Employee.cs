@@ -25,6 +25,8 @@ namespace DatabaseManagementTool
 
         public void Delete(int bsn)
         {
+            string delete_employee = $"UPDATE `employees` SET `boolean_deleted` = 1 WHERE `bsn` = '{bsn}'";
+            database.DoQuery(delete_employee);
         }
 
         public object Find(int bsn)
@@ -37,7 +39,7 @@ namespace DatabaseManagementTool
 
         public object FindAll()
         {
-            string getall_employee = "SELECT * FROM `employees`";
+            string getall_employee = "SELECT * FROM `employees` WHERE `boolean_deleted` = 0";
             List<Employee> employees = database.employeeQuery(getall_employee);
 
             return employees;
@@ -50,7 +52,9 @@ namespace DatabaseManagementTool
 
         public void Update(object model)
         {
-            throw new NotImplementedException();
+            Employee employee = (Employee)model;
+            string update_employee = $"UPDATE `employees` SET `first_name` = {employee.Name}, `last_name` = {employee.Surname} WHERE `bsn` = '{employee.BSN}'";
+            database.DoQuery(update_employee);
         }
     }
 }
