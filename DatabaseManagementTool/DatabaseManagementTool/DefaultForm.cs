@@ -84,5 +84,10 @@ namespace DatabaseManagementTool
         {
             this.AddControlToPlaceHolder(new ViewCountriesControl());
         }
+
+        private void addPostalCodesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddPostalCodeControl());
+        }
     }
 }

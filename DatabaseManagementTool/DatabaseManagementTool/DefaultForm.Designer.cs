@@ -207,6 +207,7 @@
             this.addPostalCodesToolStripMenuItem.Name = "addPostalCodesToolStripMenuItem";
             this.addPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.addPostalCodesToolStripMenuItem.Text = "Add postal codes";
+            this.addPostalCodesToolStripMenuItem.Click += new System.EventHandler(this.addPostalCodesToolStripMenuItem_Click);
             // 
             // ScreenInformation
             // 

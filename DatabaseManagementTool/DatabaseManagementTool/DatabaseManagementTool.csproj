@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\PostalCode\AddPostalCodeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PostalCode\AddPostalCodeControl.Designer.cs">
+      <DependentUpon>AddPostalCodeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Country\AddCountryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     <EmbeddedResource Include="Controls\Employee\AddEmployeeControl.resx">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PostalCode\AddPostalCodeControl.resx">
+      <DependentUpon>AddPostalCodeControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Project\AddProjectControl.resx">
       <DependentUpon>AddProjectControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,7 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\Address\" />
-    <Folder Include="Controls\PostalCode\" />
     <Folder Include="Controls\Role\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
