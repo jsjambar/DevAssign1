@@ -13,16 +13,21 @@ namespace DatabaseManagementTool
 {
     public partial class ViewProjectsControl : UserControl
     {
+        Project oProject = new Project();
         List<Project> projectslist = new List<Project>();
         int current = 0;
 
         public ViewProjectsControl()
         {
             InitializeComponent();
-            projectslist.Add(new Project { Id = 1, Name = "Project 1", Location = "Ergens 1", Hours = 30, Budget = 4000 });
-            projectslist.Add(new Project { Id = 2, Name = "Project 2", Location = "Ergens 2", Hours = 20, Budget = 2000 });
-            projectslist.Add(new Project { Id = 3, Name = "Project 3", Location = "Ergens 3", Hours = 5, Budget = 50 });
 
+            List<Project> projects = (List<Project>)oProject.FindAll();
+
+            foreach (Project project in projects)
+            {
+                projectslist.Add(new Project { Id = project.Id, Name = project.Name, Location = project.Location, Budget = project.Budget, Hours = project.Hours });
+            }
+            
             ProjectList.DisplayMember = "Name";
             ProjectList.ValueMember = "Id";
             ProjectList.DataSource = projectslist;
@@ -38,7 +43,7 @@ namespace DatabaseManagementTool
                 var values = projectslist[selectedId];
                 current = values.Id;
 
-                ProjectID.Text = values.Id.ToString();
+                ProjectId.Text = values.Id.ToString();
                 ProjectName.Text = values.Name.ToString();
                 ProjectLocation.Text = values.Location.ToString();
                 ProjectBudget.Text = values.Budget.ToString();
@@ -48,12 +53,12 @@ namespace DatabaseManagementTool
 
         private void ProjectEdit_Click(object sender, EventArgs e)
         {
-
+            oProject.Update(new Project { Id = current, Name = ProjectName.Text, Location = ProjectLocation.Text, Budget = Convert.ToInt32(ProjectBudget.Text), Hours = Convert.ToInt32(ProjectHours.Text) });
         }
 
         private void ProjectDelete_Click(object sender, EventArgs e)
         {
-
+            oProject.Delete(current);
         }
     }
 }

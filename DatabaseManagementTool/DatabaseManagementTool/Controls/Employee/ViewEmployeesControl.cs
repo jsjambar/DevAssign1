@@ -27,7 +27,7 @@ namespace DatabaseManagementTool
 
             foreach (Employee employee in employees)
             {
-                employeeslist.Add(new Employee { BSN = employee.BSN, Name = employee.Name, Surname = employee.Surname });
+                employeeslist.Add(new Employee { BSN = employee.BSN, Name = employee.Name, Surname = employee.Surname, Address = employee.Address, Education = employee.Education, Job = employee.Job });
             }
 
             EmployeesList.DisplayMember = "Name";
@@ -47,12 +47,15 @@ namespace DatabaseManagementTool
                 EmployeeBSN.Text = values.BSN.ToString();
                 EmployeeFirstName.Text = values.Name.ToString();
                 EmployeeSurname.Text = values.Surname.ToString();
+                EmployeeAddress.Text = values.Address.ToString();
+                EmployeeEducation.Text = values.Education.ToString();
+                EmployeeJob.Text = values.Job.ToString();
             }
         }
 
         private void EmployeeEdit_Click(object sender, EventArgs e)
         {
-            oEmployee.Update(new Employee { BSN = current, Name = EmployeeFirstName.Text, Surname = EmployeeSurname.Text });
+            oEmployee.Update(new Employee { BSN = current, Name = EmployeeFirstName.Text, Surname = EmployeeSurname.Text, Address = EmployeeAddress.Text, Education = EmployeeEducation.Text, Job = EmployeeJob.Text });
         }
 
         private void EmployeeDelete_Click(object sender, EventArgs e)

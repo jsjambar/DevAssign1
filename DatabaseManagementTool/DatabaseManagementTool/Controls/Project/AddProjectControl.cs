@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabaseManagementTool.Models;
 
 namespace DatabaseManagementTool
 {
@@ -24,10 +25,8 @@ namespace DatabaseManagementTool
 
         private void AddProjectButton_Click(object sender, EventArgs e)
         {
-            name = ProjectName.Text;
-            location = ProjectLocation.Text;
-            hours = ProjectHours.Text;
-            budget = ProjectBudget.Text;
+            Project project = new Project { Name = ProjectName.Text, Location = ProjectLocation.Text, Hours = Convert.ToInt32(ProjectHours.Text), Budget = Convert.ToInt32(ProjectBudget.Text) };
+            project.Create(project);
         }
     }
 }

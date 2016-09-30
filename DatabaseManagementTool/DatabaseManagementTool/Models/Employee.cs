@@ -13,13 +13,16 @@ namespace DatabaseManagementTool
         public int BSN { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        public string Address { get; set; }
+        public string Education { get; set; }
+        public string Job { get; set; }
 
         Database database = new Database();
 
         public void Create(object model)
         {
-            Employee insertable_employee = new Employee { BSN = BSN, Name = Name, Surname = Surname };
-            string create_employee = $"INSERT INTO `employees` (`bsn`, `first_name`, `last_name`) VALUES ({BSN} ,'{Name}', '{Surname}')";
+            Employee insertable_employee = new Employee { BSN = BSN, Name = Name, Surname = Surname, Address = Address, Education = Education, Job = Job };
+            string create_employee = $"INSERT INTO `employees` (`bsn`, `first_name`, `last_name`, `address`, `education`, `job`) VALUES ({BSN} ,'{Name}', '{Surname}', '{Address}', '{Education}', '{Job}')";
             database.DoQuery(create_employee);
         }
 
@@ -53,8 +56,7 @@ namespace DatabaseManagementTool
         public void Update(object model)
         {
             Employee employee = (Employee)model;
-            string update_employee = $"UPDATE `employees` SET `first_name` = '{employee.Name}', `last_name` = '{employee.Surname}' WHERE `bsn` = '{employee.BSN}'";
-          
+            string update_employee = $"UPDATE `employees` SET `first_name` = '{employee.Name}', `last_name` = '{employee.Surname}', `address` = '{employee.Address}', `education` = '{employee.Education}', `job` = '{employee.Job}' WHERE `bsn` = '{employee.BSN}'";
             database.DoQuery(update_employee);
         }
     }

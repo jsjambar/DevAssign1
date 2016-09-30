@@ -37,6 +37,12 @@
             this.EmployeeBSN = new System.Windows.Forms.TextBox();
             this.EmployeeFirstName = new System.Windows.Forms.TextBox();
             this.EmployeeSurname = new System.Windows.Forms.TextBox();
+            this.EmployeeEducation = new System.Windows.Forms.TextBox();
+            this.EmployeeAddress = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.EmployeeJob = new System.Windows.Forms.TextBox();
+            this.lbl23 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // EmployeesList
@@ -60,7 +66,7 @@
             // 
             // EmployeeEdit
             // 
-            this.EmployeeEdit.Location = new System.Drawing.Point(226, 104);
+            this.EmployeeEdit.Location = new System.Drawing.Point(226, 136);
             this.EmployeeEdit.Name = "EmployeeEdit";
             this.EmployeeEdit.Size = new System.Drawing.Size(75, 23);
             this.EmployeeEdit.TabIndex = 23;
@@ -117,10 +123,64 @@
             this.EmployeeSurname.Size = new System.Drawing.Size(100, 20);
             this.EmployeeSurname.TabIndex = 27;
             // 
+            // EmployeeEducation
+            // 
+            this.EmployeeEducation.Location = new System.Drawing.Point(201, 90);
+            this.EmployeeEducation.Name = "EmployeeEducation";
+            this.EmployeeEducation.Size = new System.Drawing.Size(100, 20);
+            this.EmployeeEducation.TabIndex = 31;
+            // 
+            // EmployeeAddress
+            // 
+            this.EmployeeAddress.Location = new System.Drawing.Point(201, 69);
+            this.EmployeeAddress.Name = "EmployeeAddress";
+            this.EmployeeAddress.Size = new System.Drawing.Size(100, 20);
+            this.EmployeeAddress.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(129, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Education";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(129, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Address";
+            // 
+            // EmployeeJob
+            // 
+            this.EmployeeJob.Location = new System.Drawing.Point(201, 111);
+            this.EmployeeJob.Name = "EmployeeJob";
+            this.EmployeeJob.Size = new System.Drawing.Size(100, 20);
+            this.EmployeeJob.TabIndex = 33;
+            // 
+            // lbl23
+            // 
+            this.lbl23.AutoSize = true;
+            this.lbl23.Location = new System.Drawing.Point(129, 114);
+            this.lbl23.Name = "lbl23";
+            this.lbl23.Size = new System.Drawing.Size(24, 13);
+            this.lbl23.TabIndex = 32;
+            this.lbl23.Text = "Job";
+            // 
             // ViewEmployeesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.EmployeeJob);
+            this.Controls.Add(this.lbl23);
+            this.Controls.Add(this.EmployeeEducation);
+            this.Controls.Add(this.EmployeeAddress);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.EmployeeSurname);
             this.Controls.Add(this.EmployeeFirstName);
             this.Controls.Add(this.EmployeeBSN);
@@ -148,5 +208,11 @@
         private System.Windows.Forms.TextBox EmployeeBSN;
         private System.Windows.Forms.TextBox EmployeeFirstName;
         private System.Windows.Forms.TextBox EmployeeSurname;
+        private System.Windows.Forms.TextBox EmployeeEducation;
+        private System.Windows.Forms.TextBox EmployeeAddress;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox EmployeeJob;
+        private System.Windows.Forms.Label lbl23;
     }
 }
