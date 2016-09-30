@@ -13,6 +13,7 @@ namespace DatabaseManagementTool
 {
     public partial class DefaultForm : Form
     {
+        Control current;
         public DefaultForm()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace DatabaseManagementTool
 
         private void AddControlToPlaceHolder(Control Control)
         {
+            current = Control;
             this.ControlPlaceholder.Controls.Clear();
             this.ControlPlaceholder.Controls.Add(Control);
         }
@@ -88,6 +90,11 @@ namespace DatabaseManagementTool
         private void addPostalCodesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.AddControlToPlaceHolder(new AddPostalCodeControl());
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            this.ControlPlaceholder.Controls.Clear();
         }
     }
 }

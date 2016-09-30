@@ -50,6 +50,7 @@
             this.addPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScreenInformation = new System.Windows.Forms.Label();
             this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
+            this.RefreshBtn = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -219,16 +220,27 @@
             // 
             // ControlPlaceholder
             // 
-            this.ControlPlaceholder.Location = new System.Drawing.Point(12, 49);
+            this.ControlPlaceholder.Location = new System.Drawing.Point(12, 24);
             this.ControlPlaceholder.Name = "ControlPlaceholder";
             this.ControlPlaceholder.Size = new System.Drawing.Size(819, 292);
             this.ControlPlaceholder.TabIndex = 3;
+            // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.Location = new System.Drawing.Point(66, 0);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(75, 23);
+            this.RefreshBtn.TabIndex = 4;
+            this.RefreshBtn.Text = "Refresh";
+            this.RefreshBtn.UseVisualStyleBackColor = true;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 431);
+            this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.ControlPlaceholder);
             this.Controls.Add(this.ScreenInformation);
             this.Controls.Add(this.statusStrip1);
@@ -267,6 +279,7 @@
         private System.Windows.Forms.ToolStripMenuItem postalCodesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPostalCodesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPostalCodesToolStripMenuItem;
+        private System.Windows.Forms.Button RefreshBtn;
     }
 }
 

@@ -69,12 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Employee\EditEmployeesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\Employee\EditEmployeesControl.Designer.cs">
-      <DependentUpon>EditEmployeesControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\PostalCode\AddPostalCodeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Employee\AddEmployeeControl.resx">
       <DependentUpon>AddEmployeeControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Employee\EditEmployeesControl.resx">
-      <DependentUpon>EditEmployeesControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PostalCode\AddPostalCodeControl.resx">
       <DependentUpon>AddPostalCodeControl.cs</DependentUpon>

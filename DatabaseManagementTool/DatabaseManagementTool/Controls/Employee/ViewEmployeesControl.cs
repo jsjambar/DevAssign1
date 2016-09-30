@@ -52,7 +52,7 @@ namespace DatabaseManagementTool
 
         private void EmployeeEdit_Click(object sender, EventArgs e)
         {
-            
+            oEmployee.Update(new Employee { BSN = current, Name = EmployeeFirstName.Text, Surname = EmployeeSurname.Text });
         }
 
         private void EmployeeDelete_Click(object sender, EventArgs e)
