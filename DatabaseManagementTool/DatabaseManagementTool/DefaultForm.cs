@@ -89,5 +89,10 @@ namespace DatabaseManagementTool
         {
             this.AddControlToPlaceHolder(new AddPostalCodeControl());
         }
+
+        private void addRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddRoleUserControl());
+        }
     }
 }

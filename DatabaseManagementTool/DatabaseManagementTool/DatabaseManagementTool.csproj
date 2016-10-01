@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Role\AddRoleUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Role\AddRoleUserControl.Designer.cs">
+      <DependentUpon>AddRoleUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\PostalCode\AddPostalCodeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +141,9 @@
       <DependentUpon>ViewProjectsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Role\AddRoleUserControl.resx">
+      <DependentUpon>AddRoleUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Country\AddCountryControl.resx">
       <DependentUpon>AddCountryControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,7 +193,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\Address\" />
-    <Folder Include="Controls\Role\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.103\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.103\build\net451\System.Data.SQLite.Core.targets')" />

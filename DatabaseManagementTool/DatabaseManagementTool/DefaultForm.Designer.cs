@@ -50,6 +50,9 @@
             this.addPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScreenInformation = new System.Windows.Forms.Label();
             this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +92,8 @@
             this.helpToolStripMenuItem,
             this.informationToolStripMenuItem,
             this.countryToolStripMenuItem,
-            this.postalCodesToolStripMenuItem});
+            this.postalCodesToolStripMenuItem,
+            this.rolesToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
             this.actionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.actionsToolStripMenuItem.Text = "Actions";
@@ -224,6 +228,28 @@
             this.ControlPlaceholder.Size = new System.Drawing.Size(819, 292);
             this.ControlPlaceholder.TabIndex = 3;
             // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewRolesToolStripMenuItem,
+            this.addRolesToolStripMenuItem});
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            // 
+            // viewRolesToolStripMenuItem
+            // 
+            this.viewRolesToolStripMenuItem.Name = "viewRolesToolStripMenuItem";
+            this.viewRolesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewRolesToolStripMenuItem.Text = "View roles";
+            // 
+            // addRolesToolStripMenuItem
+            // 
+            this.addRolesToolStripMenuItem.Name = "addRolesToolStripMenuItem";
+            this.addRolesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addRolesToolStripMenuItem.Text = "Add roles";
+            this.addRolesToolStripMenuItem.Click += new System.EventHandler(this.addRolesToolStripMenuItem_Click);
+            // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +293,9 @@
         private System.Windows.Forms.ToolStripMenuItem postalCodesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPostalCodesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPostalCodesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewRolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addRolesToolStripMenuItem;
     }
 }
 

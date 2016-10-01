@@ -28,7 +28,7 @@ namespace DatabaseManagementTool
         public void Create(object model)
         {
             PostalCode insertable_postal_code = new PostalCode { Code = Code };
-            string create_postal_code = $"INSERT INTO `postal_codes` (`code`) VALUES ('')";
+            string create_postal_code = $"INSERT INTO `postal_codes` (`code`) VALUES ('{insertable_postal_code.Code}')";
             this.database.DoQuery(create_postal_code);
         }
 
