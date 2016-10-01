@@ -50,9 +50,7 @@
             this.addPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ScreenInformation = new System.Windows.Forms.Label();
             this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RefreshBtn = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -92,8 +90,7 @@
             this.helpToolStripMenuItem,
             this.informationToolStripMenuItem,
             this.countryToolStripMenuItem,
-            this.postalCodesToolStripMenuItem,
-            this.rolesToolStripMenuItem});
+            this.postalCodesToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
             this.actionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.actionsToolStripMenuItem.Text = "Actions";
@@ -223,38 +220,27 @@
             // 
             // ControlPlaceholder
             // 
-            this.ControlPlaceholder.Location = new System.Drawing.Point(12, 49);
+            this.ControlPlaceholder.Location = new System.Drawing.Point(12, 24);
             this.ControlPlaceholder.Name = "ControlPlaceholder";
             this.ControlPlaceholder.Size = new System.Drawing.Size(819, 292);
             this.ControlPlaceholder.TabIndex = 3;
             // 
-            // rolesToolStripMenuItem
+            // RefreshBtn
             // 
-            this.rolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewRolesToolStripMenuItem,
-            this.addRolesToolStripMenuItem});
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.rolesToolStripMenuItem.Text = "Roles";
-            // 
-            // viewRolesToolStripMenuItem
-            // 
-            this.viewRolesToolStripMenuItem.Name = "viewRolesToolStripMenuItem";
-            this.viewRolesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.viewRolesToolStripMenuItem.Text = "View roles";
-            // 
-            // addRolesToolStripMenuItem
-            // 
-            this.addRolesToolStripMenuItem.Name = "addRolesToolStripMenuItem";
-            this.addRolesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addRolesToolStripMenuItem.Text = "Add roles";
-            this.addRolesToolStripMenuItem.Click += new System.EventHandler(this.addRolesToolStripMenuItem_Click);
+            this.RefreshBtn.Location = new System.Drawing.Point(66, 0);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(75, 23);
+            this.RefreshBtn.TabIndex = 4;
+            this.RefreshBtn.Text = "Refresh";
+            this.RefreshBtn.UseVisualStyleBackColor = true;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 431);
+            this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.ControlPlaceholder);
             this.Controls.Add(this.ScreenInformation);
             this.Controls.Add(this.statusStrip1);
@@ -293,9 +279,7 @@
         private System.Windows.Forms.ToolStripMenuItem postalCodesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewPostalCodesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPostalCodesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewRolesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addRolesToolStripMenuItem;
+        private System.Windows.Forms.Button RefreshBtn;
     }
 }
 

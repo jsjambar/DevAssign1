@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using DatabaseManagementTool.Models;
 
 namespace DatabaseManagementTool.Classes
 {
@@ -19,6 +20,7 @@ namespace DatabaseManagementTool.Classes
             this.CreateCountriesTable();
             this.CreatePostalCodesTable();
             this.CreateRolesTable();
+            this.CreateProjectsTable();
         }
 
         public static void CreateDatabase()
@@ -28,7 +30,7 @@ namespace DatabaseManagementTool.Classes
 
         private void CreateEmployeesTable()
         {
-            string create_employee_table = "CREATE TABLE IF NOT EXISTS `employees` (`bsn` INTEGER PRIMARY KEY, `first_name` STRING NOT NULL, `last_name` STRING NOT NULL, `boolean_deleted` BOOLEAN not null default 0)";
+            string create_employee_table = "CREATE TABLE IF NOT EXISTS `employees` (`bsn` INTEGER PRIMARY KEY, `first_name` STRING NOT NULL, `last_name` STRING NOT NULL, `address` STRING NOT NULL, `education` STRING NOT NULL, `job` STRING NOT NULL, `boolean_deleted` BOOLEAN not null default 0)";
 
             this.Query(create_employee_table);
         }
@@ -56,6 +58,12 @@ namespace DatabaseManagementTool.Classes
         {
             string create_postal_codes = "CREATE TABLE IF NOT EXISTS `postal_codes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `code` STRING NOT NULL)";
             this.Query(create_postal_codes);
+        }
+
+        private void CreateProjectsTable()
+        {
+            string create_projects_table = "CREATE TABLE IF NOT EXISTS `projects` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` STRING NOT NULL, `location` STRING NOT NULL, `budget` INT NOT NULL, `hours` INT NOT NULL, `boolean_deleted` BOOLEAN not null default 0)";
+            this.Query(create_projects_table);
         }
 
         public void DoQuery(string query)
@@ -101,11 +109,27 @@ namespace DatabaseManagementTool.Classes
             SQLiteDataReader result = command.ExecuteReader();
             while (result.Read())
             {
-                values.Add(new Employee { BSN = Convert.ToInt32(result["bsn"]), Name = result["first_name"].ToString(), Surname = result["last_name"].ToString() });
+                values.Add(new Employee { BSN = Convert.ToInt32(result["bsn"]), Name = result["first_name"].ToString(), Surname = result["last_name"].ToString(), Address = result["address"].ToString(), Education = result["education"].ToString(), Job = result["job"].ToString() });
             }
 
             return values;
+        }
 
+        public List<Project> projectQuery (string sQuery)
+        {
+            SQLiteConnection sqlite_connection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
+            sqlite_connection.Open();
+
+            List<Project> values = new List<Project>();
+
+            SQLiteCommand command = new SQLiteCommand(sQuery, sqlite_connection);
+            SQLiteDataReader result = command.ExecuteReader();
+            while (result.Read())
+            {
+                values.Add(new Project { Id = Convert.ToInt32(result["id"]), Name = result["name"].ToString(), Location = result["location"].ToString(), Budget = Convert.ToInt32(result["budget"]), Hours = Convert.ToInt32(result["hours"]) });
+            }
+
+            return values;
         }
     }
 }
