@@ -41,5 +41,10 @@ namespace DatabaseManagementTool
         {
             throw new NotImplementedException();
         }
+
+        List<object> ORM.FindAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

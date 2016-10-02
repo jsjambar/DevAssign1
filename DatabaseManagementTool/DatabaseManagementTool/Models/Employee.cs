@@ -59,5 +59,10 @@ namespace DatabaseManagementTool
             string update_employee = $"UPDATE `employees` SET `first_name` = '{employee.Name}', `last_name` = '{employee.Surname}', `address` = '{employee.Address}', `education` = '{employee.Education}', `job` = '{employee.Job}' WHERE `bsn` = '{employee.BSN}'";
             database.DoQuery(update_employee);
         }
+
+        List<object> ORM.FindAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

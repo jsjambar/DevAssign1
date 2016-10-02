@@ -21,11 +21,13 @@ namespace DatabaseManagementTool
         public AddProjectControl()
         {
             InitializeComponent();
+            Country country = new Country();
+            country.FindAll();
         }
 
         private void AddProjectButton_Click(object sender, EventArgs e)
         {
-            Project project = new Project { Name = ProjectName.Text, Location = ProjectLocation.Text, Hours = Convert.ToInt32(ProjectHours.Text), Budget = Convert.ToInt32(ProjectBudget.Text) };
+            Project project = new Project { Name = ProjectName.Text, Location = "Test", Hours = Convert.ToInt32(ProjectHours.Text), Budget = Convert.ToInt32(ProjectBudget.Text) };
             project.Create(project);
         }
     }

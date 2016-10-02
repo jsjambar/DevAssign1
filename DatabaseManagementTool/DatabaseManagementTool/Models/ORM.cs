@@ -14,7 +14,7 @@ namespace DatabaseManagementTool.Models
         void Delete(int id);
         void Create(object model);
         void Update(object model);
-        object FindAll();
+        List<object> FindAll();
         object FindLast();
     }
 }

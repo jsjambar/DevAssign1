@@ -31,12 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ProjectName = new System.Windows.Forms.TextBox();
-            this.ProjectLocation = new System.Windows.Forms.TextBox();
             this.AddProjectButton = new System.Windows.Forms.Button();
             this.ProjectBudget = new System.Windows.Forms.TextBox();
             this.ProjectHours = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.CountryList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,13 +64,6 @@
             this.ProjectName.Size = new System.Drawing.Size(100, 20);
             this.ProjectName.TabIndex = 2;
             // 
-            // ProjectLocation
-            // 
-            this.ProjectLocation.Location = new System.Drawing.Point(43, 125);
-            this.ProjectLocation.Name = "ProjectLocation";
-            this.ProjectLocation.Size = new System.Drawing.Size(100, 20);
-            this.ProjectLocation.TabIndex = 3;
-            // 
             // AddProjectButton
             // 
             this.AddProjectButton.Location = new System.Drawing.Point(203, 92);
@@ -83,7 +76,7 @@
             // 
             // ProjectBudget
             // 
-            this.ProjectBudget.Location = new System.Drawing.Point(43, 184);
+            this.ProjectBudget.Location = new System.Drawing.Point(40, 254);
             this.ProjectBudget.Name = "ProjectBudget";
             this.ProjectBudget.Size = new System.Drawing.Size(100, 20);
             this.ProjectBudget.TabIndex = 5;
@@ -107,22 +100,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 165);
+            this.label4.Location = new System.Drawing.Point(40, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Budget";
             // 
+            // CountryList
+            // 
+            this.CountryList.FormattingEnabled = true;
+            this.CountryList.Location = new System.Drawing.Point(40, 119);
+            this.CountryList.Name = "CountryList";
+            this.CountryList.Size = new System.Drawing.Size(120, 95);
+            this.CountryList.TabIndex = 9;
+            // 
             // AddProjectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CountryList);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ProjectHours);
             this.Controls.Add(this.ProjectBudget);
             this.Controls.Add(this.AddProjectButton);
-            this.Controls.Add(this.ProjectLocation);
             this.Controls.Add(this.ProjectName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -138,11 +139,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ProjectName;
-        private System.Windows.Forms.TextBox ProjectLocation;
         private System.Windows.Forms.Button AddProjectButton;
         private System.Windows.Forms.TextBox ProjectBudget;
         private System.Windows.Forms.TextBox ProjectHours;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox CountryList;
     }
 }

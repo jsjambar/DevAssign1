@@ -57,5 +57,10 @@ namespace DatabaseManagementTool.Models
             string update_project = $"UPDATE `projects` SET `name` = '{project.Name}', `location` = '{project.Location}', `budget` = '{project.Budget}', `hours` = '{project.Hours}' WHERE `id` = '{project.Id}'";
             database.DoQuery(update_project);
         }
+
+        List<object> ORM.FindAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
