@@ -27,6 +27,7 @@ namespace DatabaseManagementTool
             Helpers.HideLabel(FeedbackLabel);
 
             CountryName.Text = "";
+            CountryName.Focus();
         }
     }
 }

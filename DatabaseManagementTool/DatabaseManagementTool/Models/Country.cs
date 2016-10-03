@@ -64,7 +64,7 @@ namespace DatabaseManagementTool
 
         public void Update(object model)
         {
-            Country updated_country = new Country { Name = Name };
+            Country updated_country = new Country { ID = ID, Name = Name };
             string update_country = $"UPDATE `countries` SET `name` = '{updated_country.Name}' WHERE `id` = {updated_country.ID}";
             this.database.DoQuery(update_country);
         }

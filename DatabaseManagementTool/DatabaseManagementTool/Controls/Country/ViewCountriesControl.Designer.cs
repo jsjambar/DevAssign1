@@ -28,10 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.CountryList = new System.Windows.Forms.ListBox();
+            this.CountryName = new System.Windows.Forms.TextBox();
+            this.CountrySaveButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.FeedbackLabel = new System.Windows.Forms.Label();
+            this.CountryID = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // CountryList
+            // 
+            this.CountryList.FormattingEnabled = true;
+            this.CountryList.Location = new System.Drawing.Point(20, 79);
+            this.CountryList.Name = "CountryList";
+            this.CountryList.Size = new System.Drawing.Size(120, 95);
+            this.CountryList.TabIndex = 0;
+            this.CountryList.SelectedIndexChanged += new System.EventHandler(this.CountryList_SelectedIndexChanged);
+            // 
+            // CountryName
+            // 
+            this.CountryName.Location = new System.Drawing.Point(163, 115);
+            this.CountryName.Name = "CountryName";
+            this.CountryName.Size = new System.Drawing.Size(100, 20);
+            this.CountryName.TabIndex = 1;
+            // 
+            // CountrySaveButton
+            // 
+            this.CountrySaveButton.Location = new System.Drawing.Point(163, 151);
+            this.CountrySaveButton.Name = "CountrySaveButton";
+            this.CountrySaveButton.Size = new System.Drawing.Size(75, 23);
+            this.CountrySaveButton.TabIndex = 2;
+            this.CountrySaveButton.Text = "Save";
+            this.CountrySaveButton.UseVisualStyleBackColor = true;
+            this.CountrySaveButton.Click += new System.EventHandler(this.CountrySaveButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Click on a country to select";
+            // 
+            // FeedbackLabel
+            // 
+            this.FeedbackLabel.AutoSize = true;
+            this.FeedbackLabel.Location = new System.Drawing.Point(160, 190);
+            this.FeedbackLabel.Name = "FeedbackLabel";
+            this.FeedbackLabel.Size = new System.Drawing.Size(89, 13);
+            this.FeedbackLabel.TabIndex = 6;
+            this.FeedbackLabel.Text = "Update a country";
+            // 
+            // CountryID
+            // 
+            this.CountryID.Location = new System.Drawing.Point(163, 79);
+            this.CountryID.Name = "CountryID";
+            this.CountryID.ReadOnly = true;
+            this.CountryID.Size = new System.Drawing.Size(100, 20);
+            this.CountryID.TabIndex = 7;
+            // 
+            // ViewCountriesControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CountryID);
+            this.Controls.Add(this.FeedbackLabel);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CountrySaveButton);
+            this.Controls.Add(this.CountryName);
+            this.Controls.Add(this.CountryList);
+            this.Name = "ViewCountriesControl";
+            this.Size = new System.Drawing.Size(568, 360);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListBox CountryList;
+        private System.Windows.Forms.TextBox CountryName;
+        private System.Windows.Forms.Button CountrySaveButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label FeedbackLabel;
+        private System.Windows.Forms.TextBox CountryID;
     }
 }

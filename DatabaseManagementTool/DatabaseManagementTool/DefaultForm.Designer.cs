@@ -222,7 +222,7 @@
             // 
             this.ControlPlaceholder.Location = new System.Drawing.Point(12, 24);
             this.ControlPlaceholder.Name = "ControlPlaceholder";
-            this.ControlPlaceholder.Size = new System.Drawing.Size(819, 292);
+            this.ControlPlaceholder.Size = new System.Drawing.Size(976, 371);
             this.ControlPlaceholder.TabIndex = 3;
             // 
             // RefreshBtn
