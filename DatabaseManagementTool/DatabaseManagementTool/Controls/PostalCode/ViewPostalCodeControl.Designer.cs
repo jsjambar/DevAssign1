@@ -38,7 +38,7 @@
             // 
             // PostalCodeID
             // 
-            this.PostalCodeID.Location = new System.Drawing.Point(188, 77);
+            this.PostalCodeID.Location = new System.Drawing.Point(180, 66);
             this.PostalCodeID.Name = "PostalCodeID";
             this.PostalCodeID.ReadOnly = true;
             this.PostalCodeID.Size = new System.Drawing.Size(100, 20);
@@ -47,7 +47,7 @@
             // FeedbackLabel
             // 
             this.FeedbackLabel.AutoSize = true;
-            this.FeedbackLabel.Location = new System.Drawing.Point(185, 188);
+            this.FeedbackLabel.Location = new System.Drawing.Point(177, 177);
             this.FeedbackLabel.Name = "FeedbackLabel";
             this.FeedbackLabel.Size = new System.Drawing.Size(109, 13);
             this.FeedbackLabel.TabIndex = 12;
@@ -56,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 51);
+            this.label2.Location = new System.Drawing.Point(34, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 13);
             this.label2.TabIndex = 11;
@@ -64,9 +64,9 @@
             // 
             // PostalCodeSaveButton
             // 
-            this.PostalCodeSaveButton.Location = new System.Drawing.Point(188, 149);
+            this.PostalCodeSaveButton.Location = new System.Drawing.Point(180, 138);
             this.PostalCodeSaveButton.Name = "PostalCodeSaveButton";
-            this.PostalCodeSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.PostalCodeSaveButton.Size = new System.Drawing.Size(75, 31);
             this.PostalCodeSaveButton.TabIndex = 10;
             this.PostalCodeSaveButton.Text = "Save";
             this.PostalCodeSaveButton.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // 
             // PostalCodeName
             // 
-            this.PostalCodeName.Location = new System.Drawing.Point(188, 113);
+            this.PostalCodeName.Location = new System.Drawing.Point(180, 102);
             this.PostalCodeName.Name = "PostalCodeName";
             this.PostalCodeName.Size = new System.Drawing.Size(100, 20);
             this.PostalCodeName.TabIndex = 9;
@@ -82,9 +82,9 @@
             // PostalCodeList
             // 
             this.PostalCodeList.FormattingEnabled = true;
-            this.PostalCodeList.Location = new System.Drawing.Point(45, 77);
+            this.PostalCodeList.Location = new System.Drawing.Point(37, 66);
             this.PostalCodeList.Name = "PostalCodeList";
-            this.PostalCodeList.Size = new System.Drawing.Size(120, 95);
+            this.PostalCodeList.Size = new System.Drawing.Size(120, 134);
             this.PostalCodeList.TabIndex = 8;
             this.PostalCodeList.SelectedIndexChanged += new System.EventHandler(this.PostalCodeList_SelectedIndexChanged);
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.PostalCodeName);
             this.Controls.Add(this.PostalCodeList);
             this.Name = "ViewPostalCodeControl";
-            this.Size = new System.Drawing.Size(331, 253);
+            this.Size = new System.Drawing.Size(554, 335);
             this.ResumeLayout(false);
             this.PerformLayout();
 

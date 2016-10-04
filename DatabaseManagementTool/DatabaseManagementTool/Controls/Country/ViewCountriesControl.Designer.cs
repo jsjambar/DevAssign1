@@ -41,7 +41,7 @@
             this.CountryList.FormattingEnabled = true;
             this.CountryList.Location = new System.Drawing.Point(20, 79);
             this.CountryList.Name = "CountryList";
-            this.CountryList.Size = new System.Drawing.Size(120, 95);
+            this.CountryList.Size = new System.Drawing.Size(120, 134);
             this.CountryList.TabIndex = 0;
             this.CountryList.SelectedIndexChanged += new System.EventHandler(this.CountryList_SelectedIndexChanged);
             // 
@@ -74,7 +74,7 @@
             // FeedbackLabel
             // 
             this.FeedbackLabel.AutoSize = true;
-            this.FeedbackLabel.Location = new System.Drawing.Point(160, 190);
+            this.FeedbackLabel.Location = new System.Drawing.Point(160, 195);
             this.FeedbackLabel.Name = "FeedbackLabel";
             this.FeedbackLabel.Size = new System.Drawing.Size(89, 13);
             this.FeedbackLabel.TabIndex = 6;
@@ -99,7 +99,7 @@
             this.Controls.Add(this.CountryName);
             this.Controls.Add(this.CountryList);
             this.Name = "ViewCountriesControl";
-            this.Size = new System.Drawing.Size(568, 360);
+            this.Size = new System.Drawing.Size(593, 360);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -17,11 +17,7 @@ namespace DatabaseManagementTool
         public ViewCountriesControl()
         {
             InitializeComponent();
-
-            foreach(Country c in this.Country.FindAll())
-            {
-                CountryList.Items.Add($"{c.Name}");
-            }
+            this.AddItemsToListBox();
         }
 
         private void CountryList_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,6 +38,20 @@ namespace DatabaseManagementTool
         {
             Country country = new Country { ID = Int32.Parse(this.CountryID.Text), Name = CountryName.Text };
             country.Update(country);
+            this.AddItemsToListBox();
+            this.FeedbackLabel.ForeColor = Color.ForestGreen;
+            this.FeedbackLabel.Text = $"Updated country to {CountryName.Text}";
+
+        }
+
+        private void AddItemsToListBox()
+        {
+            this.CountryList.Items.Clear();
+
+            foreach (Country c in this.Country.FindAll())
+            {
+                this.CountryList.Items.Add(c.Name);
+            }
         }
     }
 }
