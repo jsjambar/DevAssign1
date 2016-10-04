@@ -2,6 +2,7 @@
 using DatabaseManagementTool.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,12 +35,9 @@ namespace DatabaseManagementTool
 
         public void Update(object model)
         {
-            throw new NotImplementedException();
-        }
-
-        public object FindAll()
-        {
-            throw new NotImplementedException();
+            PostalCode updated_postal_code = new PostalCode { ID = ID, Code = Code };
+            string update_postal_code = $"UPDATE `postal_codes` SET `code` = '{updated_postal_code.Code}' WHERE `id` = {updated_postal_code.ID}";
+            this.database.DoQuery(update_postal_code);
         }
 
         public object FindLast()
@@ -47,9 +45,22 @@ namespace DatabaseManagementTool
             throw new NotImplementedException();
         }
 
-        List<object> ORM.FindAll()
+        public List<object> FindAll()
         {
-            throw new NotImplementedException();
+            SQLiteConnection sqlite_connection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
+            sqlite_connection.Open();
+            SQLiteCommand sqlite_command = new SQLiteCommand("SELECT * FROM `postal_codes` ORDER BY `code`", sqlite_connection);
+            SQLiteDataReader sql_data_reader = sqlite_command.ExecuteReader();
+            List<object> postal_code_list = new List<object>();
+
+            while (sql_data_reader.Read())
+            {
+                postal_code_list.Add(new PostalCode { ID = sql_data_reader.GetInt32(0), Code = sql_data_reader.GetString(1) });
+            }
+
+            sqlite_connection.Close();
+
+            return postal_code_list;
         }
     }
 }

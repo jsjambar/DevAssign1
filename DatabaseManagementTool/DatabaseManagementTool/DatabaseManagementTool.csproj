@@ -141,6 +141,12 @@
       <DependentUpon>ViewProjectsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\PostalCode\ViewPostalCodeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PostalCode\ViewPostalCodeControl.Designer.cs">
+      <DependentUpon>ViewPostalCodeControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controls\Country\ViewCountriesControl.resx">
       <DependentUpon>ViewCountriesControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +186,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controls\PostalCode\ViewPostalCodeControl.resx">
+      <DependentUpon>ViewPostalCodeControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

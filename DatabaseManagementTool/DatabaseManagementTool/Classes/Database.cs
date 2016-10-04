@@ -107,6 +107,7 @@ namespace DatabaseManagementTool.Classes
 
             SQLiteCommand command = new SQLiteCommand(sQuery, sqlite_connection);
             SQLiteDataReader result = command.ExecuteReader();
+
             while (result.Read())
             {
                 values.Add(new Employee { BSN = Convert.ToInt32(result["bsn"]), Name = result["first_name"].ToString(), Surname = result["last_name"].ToString(), Address = result["address"].ToString(), Education = result["education"].ToString(), Job = result["job"].ToString() });

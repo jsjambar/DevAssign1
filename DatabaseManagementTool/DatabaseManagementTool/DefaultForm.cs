@@ -96,5 +96,10 @@ namespace DatabaseManagementTool
         {
             this.ControlPlaceholder.Controls.Clear();
         }
+
+        private void viewPostalCodesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new ViewPostalCodeControl());
+        }
     }
 }

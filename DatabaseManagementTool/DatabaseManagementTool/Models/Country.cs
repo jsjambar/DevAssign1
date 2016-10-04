@@ -13,7 +13,6 @@ namespace DatabaseManagementTool
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public List<Country> CountryList = new List<Country>();
 
         Database database = new Database();
 

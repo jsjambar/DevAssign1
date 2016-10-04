@@ -202,6 +202,7 @@
             this.viewPostalCodesToolStripMenuItem.Name = "viewPostalCodesToolStripMenuItem";
             this.viewPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.viewPostalCodesToolStripMenuItem.Text = "View postal codes";
+            this.viewPostalCodesToolStripMenuItem.Click += new System.EventHandler(this.viewPostalCodesToolStripMenuItem_Click);
             // 
             // addPostalCodesToolStripMenuItem
             // 

@@ -26,11 +26,7 @@ namespace DatabaseManagementTool
 
         private void CountryList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            //CountryName.Text = CountryList.SelectedItem.ToString();
-
             var country_list = this.Country.FindAll();
-            this.CountryName.Text = "TEST";
 
             foreach(Country country in country_list)
             {
