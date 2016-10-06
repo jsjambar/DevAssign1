@@ -30,17 +30,18 @@ namespace DatabaseManagementTool
                 {
                     this.PostalCodeID.Text = pc.ID.ToString();
                     this.PostalCodeName.Text = pc.Code.ToString();
+                    this.PostalCodeCity.Text = pc.City.ToString();
                 }
             }
         }
 
         private void PostalCodeSaveButton_Click(object sender, EventArgs e)
         {
-            PostalCode postal_code = new PostalCode { ID = Int32.Parse(this.PostalCodeID.Text), Code = this.PostalCodeName.Text };
+            PostalCode postal_code = new PostalCode { ID = Int32.Parse(this.PostalCodeID.Text), Code = this.PostalCodeName.Text.ToString(), City = this.PostalCodeCity.Text.ToString() };
             postal_code.Update(postal_code);
             this.AddItemsToListBox();
             this.FeedbackLabel.ForeColor = Color.ForestGreen;
-            this.FeedbackLabel.Text = $"Updated postal code with {this.PostalCodeName.Text.ToString()}";
+            this.FeedbackLabel.Text = $"Updated postal code with {this.PostalCodeName.Text.ToString()} and set city to {this.PostalCodeCity.Text.ToString()}";
         }
 
         private void AddItemsToListBox()

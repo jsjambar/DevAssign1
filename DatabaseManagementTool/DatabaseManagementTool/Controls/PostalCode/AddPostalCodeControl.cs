@@ -19,9 +19,9 @@ namespace DatabaseManagementTool
 
         private void PostalCodeSaveButton_Click(object sender, EventArgs e)
         {
-            PostalCode postal_code = new PostalCode { Code = PostalCodeValue.Text.ToString() };
+            PostalCode postal_code = new PostalCode { Code = PostalCodeValue.Text.ToString(), City = PostalCodeCity.Text.ToString()};
             postal_code.Create(postal_code);
-            FeedbackLabel.Text = $"Postal code with the value of {postal_code.Code} saved.";
+            FeedbackLabel.Text = $"Postal code with the value of {postal_code.Code}, located in {postal_code.City} saved.";
             PostalCodeValue.Text = "";
             PostalCodeValue.Focus();
         }

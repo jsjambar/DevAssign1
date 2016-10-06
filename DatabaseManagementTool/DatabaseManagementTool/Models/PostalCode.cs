@@ -14,6 +14,8 @@ namespace DatabaseManagementTool
         public int ID { get; set; }
         public string Code { get; set; }
 
+        public string City { get; set; }
+
         Database database = new Database();
 
         public object Find(int id)
@@ -28,15 +30,15 @@ namespace DatabaseManagementTool
 
         public void Create(object model)
         {
-            PostalCode insertable_postal_code = new PostalCode { Code = Code };
-            string create_postal_code = $"INSERT INTO `postal_codes` (`code`) VALUES ('{insertable_postal_code.Code}')";
+            PostalCode insertable_postal_code = new PostalCode { Code = Code, City = City};
+            string create_postal_code = $"INSERT INTO `postal_codes` (`code`, `city`) VALUES ('{insertable_postal_code.Code}', '{insertable_postal_code.City}')";
             this.database.DoQuery(create_postal_code);
         }
 
         public void Update(object model)
         {
-            PostalCode updated_postal_code = new PostalCode { ID = ID, Code = Code };
-            string update_postal_code = $"UPDATE `postal_codes` SET `code` = '{updated_postal_code.Code}' WHERE `id` = {updated_postal_code.ID}";
+            PostalCode updated_postal_code = new PostalCode { ID = ID, Code = Code , City = City};
+            string update_postal_code = $"UPDATE `postal_codes` SET `code` = '{updated_postal_code.Code}', `city` = '{updated_postal_code.City}' WHERE `id` = {updated_postal_code.ID}";
             this.database.DoQuery(update_postal_code);
         }
 
@@ -55,7 +57,7 @@ namespace DatabaseManagementTool
 
             while (sql_data_reader.Read())
             {
-                postal_code_list.Add(new PostalCode { ID = sql_data_reader.GetInt32(0), Code = sql_data_reader.GetString(1) });
+                postal_code_list.Add(new PostalCode { ID = sql_data_reader.GetInt32(0), Code = sql_data_reader.GetString(1), City = sql_data_reader.GetString(2) });
             }
 
             sqlite_connection.Close();

@@ -34,6 +34,7 @@
             this.PostalCodeSaveButton = new System.Windows.Forms.Button();
             this.PostalCodeName = new System.Windows.Forms.TextBox();
             this.PostalCodeList = new System.Windows.Forms.ListBox();
+            this.PostalCodeCity = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // PostalCodeID
@@ -47,7 +48,7 @@
             // FeedbackLabel
             // 
             this.FeedbackLabel.AutoSize = true;
-            this.FeedbackLabel.Location = new System.Drawing.Point(177, 177);
+            this.FeedbackLabel.Location = new System.Drawing.Point(177, 239);
             this.FeedbackLabel.Name = "FeedbackLabel";
             this.FeedbackLabel.Size = new System.Drawing.Size(109, 13);
             this.FeedbackLabel.TabIndex = 12;
@@ -64,7 +65,7 @@
             // 
             // PostalCodeSaveButton
             // 
-            this.PostalCodeSaveButton.Location = new System.Drawing.Point(180, 138);
+            this.PostalCodeSaveButton.Location = new System.Drawing.Point(180, 172);
             this.PostalCodeSaveButton.Name = "PostalCodeSaveButton";
             this.PostalCodeSaveButton.Size = new System.Drawing.Size(75, 31);
             this.PostalCodeSaveButton.TabIndex = 10;
@@ -74,7 +75,7 @@
             // 
             // PostalCodeName
             // 
-            this.PostalCodeName.Location = new System.Drawing.Point(180, 102);
+            this.PostalCodeName.Location = new System.Drawing.Point(180, 92);
             this.PostalCodeName.Name = "PostalCodeName";
             this.PostalCodeName.Size = new System.Drawing.Size(100, 20);
             this.PostalCodeName.TabIndex = 9;
@@ -84,14 +85,22 @@
             this.PostalCodeList.FormattingEnabled = true;
             this.PostalCodeList.Location = new System.Drawing.Point(37, 66);
             this.PostalCodeList.Name = "PostalCodeList";
-            this.PostalCodeList.Size = new System.Drawing.Size(120, 134);
+            this.PostalCodeList.Size = new System.Drawing.Size(120, 186);
             this.PostalCodeList.TabIndex = 8;
             this.PostalCodeList.SelectedIndexChanged += new System.EventHandler(this.PostalCodeList_SelectedIndexChanged);
+            // 
+            // PostalCodeCity
+            // 
+            this.PostalCodeCity.Location = new System.Drawing.Point(180, 128);
+            this.PostalCodeCity.Name = "PostalCodeCity";
+            this.PostalCodeCity.Size = new System.Drawing.Size(100, 20);
+            this.PostalCodeCity.TabIndex = 14;
             // 
             // ViewPostalCodeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.PostalCodeCity);
             this.Controls.Add(this.PostalCodeID);
             this.Controls.Add(this.FeedbackLabel);
             this.Controls.Add(this.label2);
@@ -113,5 +122,6 @@
         private System.Windows.Forms.Button PostalCodeSaveButton;
         private System.Windows.Forms.TextBox PostalCodeName;
         private System.Windows.Forms.ListBox PostalCodeList;
+        private System.Windows.Forms.TextBox PostalCodeCity;
     }
 }

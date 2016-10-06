@@ -32,11 +32,14 @@
             this.PostalCodeValue = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FeedbackLabel = new System.Windows.Forms.Label();
+            this.PostalCodeCity = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PostalCodeSaveButton
             // 
-            this.PostalCodeSaveButton.Location = new System.Drawing.Point(0, 83);
+            this.PostalCodeSaveButton.Location = new System.Drawing.Point(149, 100);
             this.PostalCodeSaveButton.Name = "PostalCodeSaveButton";
             this.PostalCodeSaveButton.Size = new System.Drawing.Size(75, 23);
             this.PostalCodeSaveButton.TabIndex = 0;
@@ -46,7 +49,7 @@
             // 
             // PostalCodeValue
             // 
-            this.PostalCodeValue.Location = new System.Drawing.Point(0, 47);
+            this.PostalCodeValue.Location = new System.Drawing.Point(149, 48);
             this.PostalCodeValue.Name = "PostalCodeValue";
             this.PostalCodeValue.Size = new System.Drawing.Size(100, 20);
             this.PostalCodeValue.TabIndex = 1;
@@ -54,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-3, 21);
+            this.label1.Location = new System.Drawing.Point(3, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 2;
@@ -63,22 +66,50 @@
             // FeedbackLabel
             // 
             this.FeedbackLabel.AutoSize = true;
-            this.FeedbackLabel.Location = new System.Drawing.Point(-3, 122);
+            this.FeedbackLabel.Location = new System.Drawing.Point(3, 139);
             this.FeedbackLabel.Name = "FeedbackLabel";
             this.FeedbackLabel.Size = new System.Drawing.Size(81, 13);
             this.FeedbackLabel.TabIndex = 3;
             this.FeedbackLabel.Text = "FeedbackLabel";
             // 
+            // PostalCodeCity
+            // 
+            this.PostalCodeCity.Location = new System.Drawing.Point(149, 74);
+            this.PostalCodeCity.Name = "PostalCodeCity";
+            this.PostalCodeCity.Size = new System.Drawing.Size(100, 20);
+            this.PostalCodeCity.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Code (example: 1234AB)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "City (example: Rotterdam)";
+            // 
             // AddPostalCodeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.PostalCodeCity);
             this.Controls.Add(this.FeedbackLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PostalCodeValue);
             this.Controls.Add(this.PostalCodeSaveButton);
             this.Name = "AddPostalCodeControl";
-            this.Size = new System.Drawing.Size(233, 182);
+            this.Size = new System.Drawing.Size(423, 296);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,5 +121,8 @@
         private System.Windows.Forms.TextBox PostalCodeValue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label FeedbackLabel;
+        private System.Windows.Forms.TextBox PostalCodeCity;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

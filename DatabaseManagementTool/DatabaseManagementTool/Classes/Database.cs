@@ -56,7 +56,7 @@ namespace DatabaseManagementTool.Classes
 
         private void CreatePostalCodesTable()
         {
-            string create_postal_codes = "CREATE TABLE IF NOT EXISTS `postal_codes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `code` STRING NOT NULL)";
+            string create_postal_codes = "CREATE TABLE IF NOT EXISTS `postal_codes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `code` STRING NOT NULL, `city` STRING NOT NULL)";
             this.Query(create_postal_codes);
         }
 
