@@ -101,5 +101,15 @@ namespace DatabaseManagementTool
         {
             this.AddControlToPlaceHolder(new ViewPostalCodeControl());
         }
+
+        private void addRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddRoleUserControl());
+        }
+
+        private void viewRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new ViewRoleControl());
+        }
     }
 }

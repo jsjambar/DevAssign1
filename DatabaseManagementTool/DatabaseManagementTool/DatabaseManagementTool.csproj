@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Address\AddAddressUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Address\AddAddressUserControl.Designer.cs">
+      <DependentUpon>AddAddressUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Role\AddRoleUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +153,15 @@
     <Compile Include="Controls\PostalCode\ViewPostalCodeControl.Designer.cs">
       <DependentUpon>ViewPostalCodeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Role\ViewRoleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Role\ViewRoleControl.Designer.cs">
+      <DependentUpon>ViewRoleControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\Address\AddAddressUserControl.resx">
+      <DependentUpon>AddAddressUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Country\ViewCountriesControl.resx">
       <DependentUpon>ViewCountriesControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +204,9 @@
     <EmbeddedResource Include="Controls\PostalCode\ViewPostalCodeControl.resx">
       <DependentUpon>ViewPostalCodeControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Role\ViewRoleControl.resx">
+      <DependentUpon>ViewRoleControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,9 +221,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\Address\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.103\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.103\build\net451\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

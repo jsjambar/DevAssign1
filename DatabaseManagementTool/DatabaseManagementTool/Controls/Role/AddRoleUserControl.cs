@@ -22,6 +22,7 @@ namespace DatabaseManagementTool
             Role role = new Role { Name = RoleValue.Text };
             role.Create(role);
 
+            FeedbackLabel.ForeColor = Color.ForestGreen;
             FeedbackLabel.Text = $"A role with the value of {role.Name} is saved";
             RoleValue.Text = "";
             RoleValue.Focus();

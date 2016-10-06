@@ -39,9 +39,9 @@
             this.FeedbackLabel.AutoSize = true;
             this.FeedbackLabel.Location = new System.Drawing.Point(33, 138);
             this.FeedbackLabel.Name = "FeedbackLabel";
-            this.FeedbackLabel.Size = new System.Drawing.Size(81, 13);
+            this.FeedbackLabel.Size = new System.Drawing.Size(90, 13);
             this.FeedbackLabel.TabIndex = 7;
-            this.FeedbackLabel.Text = "FeedbackLabel";
+            this.FeedbackLabel.Text = "Create a new role";
             // 
             // label1
             // 
@@ -78,7 +78,7 @@
             this.Controls.Add(this.RoleValue);
             this.Controls.Add(this.RoleSaveButton);
             this.Name = "AddRoleUserControl";
-            this.Size = new System.Drawing.Size(279, 224);
+            this.Size = new System.Drawing.Size(503, 312);
             this.ResumeLayout(false);
             this.PerformLayout();
 
