@@ -39,6 +39,12 @@
             this.postalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPostalCodesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,12 +56,6 @@
             this.ScreenInformation = new System.Windows.Forms.Label();
             this.ControlPlaceholder = new System.Windows.Forms.FlowLayoutPanel();
             this.RefreshBtn = new System.Windows.Forms.Button();
-            this.addressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -113,14 +113,15 @@
             // addCountriesToolStripMenuItem
             // 
             this.addCountriesToolStripMenuItem.Name = "addCountriesToolStripMenuItem";
-            this.addCountriesToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.addCountriesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.addCountriesToolStripMenuItem.Text = "View countries";
             this.addCountriesToolStripMenuItem.Click += new System.EventHandler(this.addCountriesToolStripMenuItem_Click);
             // 
             // addCountriesToolStripMenuItem1
             // 
             this.addCountriesToolStripMenuItem1.Name = "addCountriesToolStripMenuItem1";
-            this.addCountriesToolStripMenuItem1.Size = new System.Drawing.Size(151, 22);
+            this.addCountriesToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
+            this.addCountriesToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.addCountriesToolStripMenuItem1.Text = "Add countries";
             this.addCountriesToolStripMenuItem1.Click += new System.EventHandler(this.addCountriesToolStripMenuItem1_Click);
             // 
@@ -136,16 +137,63 @@
             // viewPostalCodesToolStripMenuItem
             // 
             this.viewPostalCodesToolStripMenuItem.Name = "viewPostalCodesToolStripMenuItem";
-            this.viewPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.viewPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.viewPostalCodesToolStripMenuItem.Text = "View postal codes";
             this.viewPostalCodesToolStripMenuItem.Click += new System.EventHandler(this.viewPostalCodesToolStripMenuItem_Click);
             // 
             // addPostalCodesToolStripMenuItem
             // 
             this.addPostalCodesToolStripMenuItem.Name = "addPostalCodesToolStripMenuItem";
-            this.addPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.addPostalCodesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D2)));
+            this.addPostalCodesToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.addPostalCodesToolStripMenuItem.Text = "Add postal codes";
             this.addPostalCodesToolStripMenuItem.Click += new System.EventHandler(this.addPostalCodesToolStripMenuItem_Click);
+            // 
+            // addressToolStripMenuItem
+            // 
+            this.addressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewAddressesToolStripMenuItem,
+            this.addAddressesToolStripMenuItem});
+            this.addressToolStripMenuItem.Name = "addressToolStripMenuItem";
+            this.addressToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.addressToolStripMenuItem.Text = "Address";
+            // 
+            // viewAddressesToolStripMenuItem
+            // 
+            this.viewAddressesToolStripMenuItem.Name = "viewAddressesToolStripMenuItem";
+            this.viewAddressesToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.viewAddressesToolStripMenuItem.Text = "View addresses";
+            // 
+            // addAddressesToolStripMenuItem
+            // 
+            this.addAddressesToolStripMenuItem.Name = "addAddressesToolStripMenuItem";
+            this.addAddressesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
+            this.addAddressesToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.addAddressesToolStripMenuItem.Text = "Add addresses";
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewRolesToolStripMenuItem,
+            this.addRolesToolStripMenuItem});
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            // 
+            // viewRolesToolStripMenuItem
+            // 
+            this.viewRolesToolStripMenuItem.Name = "viewRolesToolStripMenuItem";
+            this.viewRolesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.viewRolesToolStripMenuItem.Text = "View roles";
+            this.viewRolesToolStripMenuItem.Click += new System.EventHandler(this.viewRolesToolStripMenuItem_Click);
+            // 
+            // addRolesToolStripMenuItem
+            // 
+            this.addRolesToolStripMenuItem.Name = "addRolesToolStripMenuItem";
+            this.addRolesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D4)));
+            this.addRolesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addRolesToolStripMenuItem.Text = "Add roles";
+            this.addRolesToolStripMenuItem.Click += new System.EventHandler(this.addRolesToolStripMenuItem_Click);
             // 
             // viewProjectsToolStripMenuItem
             // 
@@ -235,50 +283,6 @@
             this.RefreshBtn.Text = "Refresh";
             this.RefreshBtn.UseVisualStyleBackColor = true;
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
-            // 
-            // addressToolStripMenuItem
-            // 
-            this.addressToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewAddressesToolStripMenuItem,
-            this.addAddressesToolStripMenuItem});
-            this.addressToolStripMenuItem.Name = "addressToolStripMenuItem";
-            this.addressToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.addressToolStripMenuItem.Text = "Address";
-            // 
-            // viewAddressesToolStripMenuItem
-            // 
-            this.viewAddressesToolStripMenuItem.Name = "viewAddressesToolStripMenuItem";
-            this.viewAddressesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.viewAddressesToolStripMenuItem.Text = "View addresses";
-            // 
-            // addAddressesToolStripMenuItem
-            // 
-            this.addAddressesToolStripMenuItem.Name = "addAddressesToolStripMenuItem";
-            this.addAddressesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.addAddressesToolStripMenuItem.Text = "Add addresses";
-            // 
-            // rolesToolStripMenuItem
-            // 
-            this.rolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewRolesToolStripMenuItem,
-            this.addRolesToolStripMenuItem});
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.rolesToolStripMenuItem.Text = "Roles";
-            // 
-            // viewRolesToolStripMenuItem
-            // 
-            this.viewRolesToolStripMenuItem.Name = "viewRolesToolStripMenuItem";
-            this.viewRolesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.viewRolesToolStripMenuItem.Text = "View roles";
-            this.viewRolesToolStripMenuItem.Click += new System.EventHandler(this.viewRolesToolStripMenuItem_Click);
-            // 
-            // addRolesToolStripMenuItem
-            // 
-            this.addRolesToolStripMenuItem.Name = "addRolesToolStripMenuItem";
-            this.addRolesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addRolesToolStripMenuItem.Text = "Add roles";
-            this.addRolesToolStripMenuItem.Click += new System.EventHandler(this.addRolesToolStripMenuItem_Click);
             // 
             // DefaultForm
             // 
