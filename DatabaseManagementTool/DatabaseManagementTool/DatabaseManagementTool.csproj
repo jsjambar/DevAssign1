@@ -69,11 +69,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Address\AddAddressUserControl.cs">
+    <Compile Include="Controls\Address\AddAddressControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Address\AddAddressUserControl.Designer.cs">
-      <DependentUpon>AddAddressUserControl.cs</DependentUpon>
+    <Compile Include="Controls\Address\AddAddressControl.Designer.cs">
+      <DependentUpon>AddAddressControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Role\AddRoleUserControl.cs">
       <SubType>UserControl</SubType>
@@ -159,8 +159,8 @@
     <Compile Include="Controls\Role\ViewRoleControl.Designer.cs">
       <DependentUpon>ViewRoleControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controls\Address\AddAddressUserControl.resx">
-      <DependentUpon>AddAddressUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\Address\AddAddressControl.resx">
+      <DependentUpon>AddAddressControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Country\ViewCountriesControl.resx">
       <DependentUpon>ViewCountriesControl.cs</DependentUpon>

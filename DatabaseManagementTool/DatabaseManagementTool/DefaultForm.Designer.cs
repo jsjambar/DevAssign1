@@ -170,6 +170,7 @@
             this.addAddressesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
             this.addAddressesToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.addAddressesToolStripMenuItem.Text = "Add addresses";
+            this.addAddressesToolStripMenuItem.Click += new System.EventHandler(this.addAddressesToolStripMenuItem_Click);
             // 
             // rolesToolStripMenuItem
             // 

@@ -111,5 +111,10 @@ namespace DatabaseManagementTool
         {
             this.AddControlToPlaceHolder(new ViewRoleControl());
         }
+
+        private void addAddressesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddAddressUserControl());
+        }
     }
 }

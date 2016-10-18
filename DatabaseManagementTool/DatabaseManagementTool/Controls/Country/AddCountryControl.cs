@@ -23,9 +23,9 @@ namespace DatabaseManagementTool
             Country country = new Country { Name = CountryName.Text.ToString() };
             country.Create(country);
 
-            FeedbackLabel.Text = "Country has been created and saved!";
-            Helpers.HideLabel(FeedbackLabel);
-
+            FeedbackLabel.ForeColor = Color.ForestGreen;
+            FeedbackLabel.Text = $"Country '{country.Name}' has been created and saved!";
+            
             CountryName.Text = "";
             CountryName.Focus();
         }
