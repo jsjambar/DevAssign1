@@ -163,6 +163,7 @@
             this.viewAddressesToolStripMenuItem.Name = "viewAddressesToolStripMenuItem";
             this.viewAddressesToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.viewAddressesToolStripMenuItem.Text = "View addresses";
+            this.viewAddressesToolStripMenuItem.Click += new System.EventHandler(this.viewAddressesToolStripMenuItem_Click);
             // 
             // addAddressesToolStripMenuItem
             // 

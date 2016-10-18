@@ -35,6 +35,7 @@
             this.PostalCodeName = new System.Windows.Forms.TextBox();
             this.PostalCodeList = new System.Windows.Forms.ListBox();
             this.PostalCodeCity = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // PostalCodeID
@@ -96,10 +97,22 @@
             this.PostalCodeCity.Size = new System.Drawing.Size(100, 20);
             this.PostalCodeCity.TabIndex = 14;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(34, 286);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(116, 13);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Create new postalcode";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ViewPostalCodeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.PostalCodeCity);
             this.Controls.Add(this.PostalCodeID);
             this.Controls.Add(this.FeedbackLabel);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.TextBox PostalCodeName;
         private System.Windows.Forms.ListBox PostalCodeList;
         private System.Windows.Forms.TextBox PostalCodeCity;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

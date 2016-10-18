@@ -37,7 +37,7 @@ namespace DatabaseManagementTool.Classes
 
         private void CreateAddressesTable()
         {
-            string create_addresses_table = "CREATE TABLE IF NOT EXISTS `addresses` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` STRING NOT NULL, `street` STRING NOT NULL)";
+            string create_addresses_table = "CREATE TABLE IF NOT EXISTS `addresses` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `street` STRING NOT NULL, `number` STRING NOT NULL)";
 
             this.Query(create_addresses_table);
         }

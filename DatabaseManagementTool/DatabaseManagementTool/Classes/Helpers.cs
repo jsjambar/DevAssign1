@@ -21,5 +21,11 @@ namespace DatabaseManagementTool.Classes
         {
             label.Show();
         }
+
+        public static void SetControl(Control parent, Control child)
+        {
+            parent.Controls.Clear();
+            parent.Controls.Add(child); 
+        }
     }
 }

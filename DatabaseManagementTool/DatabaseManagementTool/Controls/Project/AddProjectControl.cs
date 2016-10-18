@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DatabaseManagementTool.Models;
+using DatabaseManagementTool.Classes;
 
 namespace DatabaseManagementTool
 {
@@ -29,6 +30,11 @@ namespace DatabaseManagementTool
         {
             Project project = new Project { Name = ProjectName.Text, Location = "Test", Hours = Convert.ToInt32(ProjectHours.Text), Budget = Convert.ToInt32(ProjectBudget.Text) };
             project.Create(project);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Helpers.SetControl(this, new ViewProjectsControl());
         }
     }
 }

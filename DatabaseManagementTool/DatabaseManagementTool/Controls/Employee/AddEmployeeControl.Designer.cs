@@ -42,7 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.EmployeeBSN = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.feedbackControl1 = new DatabaseManagementTool.FeedbackControl();
+            this.label7 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // AddEmployeeControlTitle
@@ -160,18 +161,32 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "BSN";
             // 
-            // feedbackControl1
+            // label7
             // 
-            this.feedbackControl1.Location = new System.Drawing.Point(16, 255);
-            this.feedbackControl1.Name = "feedbackControl1";
-            this.feedbackControl1.Size = new System.Drawing.Size(249, 97);
-            this.feedbackControl1.TabIndex = 14;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "label7";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(27, 271);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(83, 13);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "View employees";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // AddEmployeeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.feedbackControl1);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.EmployeeBSN);
             this.Controls.Add(this.label5);
@@ -209,6 +224,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox EmployeeBSN;
         private System.Windows.Forms.Label label6;
-        private FeedbackControl feedbackControl1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

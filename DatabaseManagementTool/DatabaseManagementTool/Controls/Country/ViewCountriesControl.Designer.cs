@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.FeedbackLabel = new System.Windows.Forms.Label();
             this.CountryID = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // CountryList
@@ -51,6 +52,7 @@
             this.CountryName.Name = "CountryName";
             this.CountryName.Size = new System.Drawing.Size(100, 20);
             this.CountryName.TabIndex = 1;
+            this.CountryName.TextChanged += new System.EventHandler(this.CountryName_TextChanged);
             // 
             // CountrySaveButton
             // 
@@ -79,6 +81,7 @@
             this.FeedbackLabel.Size = new System.Drawing.Size(89, 13);
             this.FeedbackLabel.TabIndex = 6;
             this.FeedbackLabel.Text = "Update a country";
+            this.FeedbackLabel.Click += new System.EventHandler(this.FeedbackLabel_Click);
             // 
             // CountryID
             // 
@@ -87,11 +90,24 @@
             this.CountryID.ReadOnly = true;
             this.CountryID.Size = new System.Drawing.Size(100, 20);
             this.CountryID.TabIndex = 7;
+            this.CountryID.TextChanged += new System.EventHandler(this.CountryID_TextChanged);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(17, 238);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(108, 13);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Create a new country";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // ViewCountriesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.CountryID);
             this.Controls.Add(this.FeedbackLabel);
             this.Controls.Add(this.label2);
@@ -113,5 +129,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label FeedbackLabel;
         private System.Windows.Forms.TextBox CountryID;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -2,6 +2,7 @@
 using DatabaseManagementTool.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,20 @@ namespace DatabaseManagementTool
 
         public List<object> FindAll()
         {
-            throw new NotImplementedException();
+            SQLiteConnection sqlite_connection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
+            sqlite_connection.Open();
+            SQLiteCommand sqlite_command = new SQLiteCommand("SELECT * FROM `addresses` ORDER BY `street`", sqlite_connection);
+            SQLiteDataReader sql_data_reader = sqlite_command.ExecuteReader();
+            List<object> address_list = new List<object>();
+
+            while (sql_data_reader.Read())
+            {
+                address_list.Add(new Address { ID = sql_data_reader.GetInt32(0), Street = sql_data_reader.GetString(1), Number = sql_data_reader.GetString(2) });
+            }
+
+            sqlite_connection.Close();
+
+            return address_list;
         }
 
         public object FindLast()

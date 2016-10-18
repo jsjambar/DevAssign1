@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabaseManagementTool.Classes;
 
 namespace DatabaseManagementTool
 {
@@ -52,6 +53,11 @@ namespace DatabaseManagementTool
             {
                 this.PostalCodeList.Items.Add(pc.Code);
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Helpers.SetControl(this, new AddPostalCodeControl());
         }
     }
 }

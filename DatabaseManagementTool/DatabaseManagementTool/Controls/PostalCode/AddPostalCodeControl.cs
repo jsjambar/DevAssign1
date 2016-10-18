@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabaseManagementTool.Classes;
 
 namespace DatabaseManagementTool
 {
@@ -24,6 +25,11 @@ namespace DatabaseManagementTool
             FeedbackLabel.Text = $"Postal code with the value of {postal_code.Code}, located in {postal_code.City} saved.";
             PostalCodeValue.Text = "";
             PostalCodeValue.Focus();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Helpers.SetControl(this, new ViewPostalCodeControl());
         }
     }
 }

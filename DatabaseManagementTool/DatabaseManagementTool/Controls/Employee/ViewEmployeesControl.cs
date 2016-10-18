@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DatabaseManagementTool.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using DatabaseManagementTool.Classes;
 
 namespace DatabaseManagementTool
 {
@@ -61,6 +62,11 @@ namespace DatabaseManagementTool
         private void EmployeeDelete_Click(object sender, EventArgs e)
         {
             oEmployee.Delete(current);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Helpers.SetControl(this, new AddEmployeeControl());
         }
     }
 }

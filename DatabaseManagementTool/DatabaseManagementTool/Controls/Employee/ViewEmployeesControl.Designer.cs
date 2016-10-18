@@ -43,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.EmployeeJob = new System.Windows.Forms.TextBox();
             this.lbl23 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // EmployeesList
@@ -171,10 +172,22 @@
             this.lbl23.TabIndex = 32;
             this.lbl23.Text = "Job";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(3, 189);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(118, 13);
+            this.linkLabel1.TabIndex = 34;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Create a new employee";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ViewEmployeesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.EmployeeJob);
             this.Controls.Add(this.lbl23);
             this.Controls.Add(this.EmployeeEducation);
@@ -214,5 +227,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox EmployeeJob;
         private System.Windows.Forms.Label lbl23;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabaseManagementTool.Classes;
 
 namespace DatabaseManagementTool
 {
@@ -41,7 +42,6 @@ namespace DatabaseManagementTool
             this.AddItemsToListBox();
             this.FeedbackLabel.ForeColor = Color.ForestGreen;
             this.FeedbackLabel.Text = $"Updated country to {CountryName.Text}";
-
         }
 
         private void AddItemsToListBox()
@@ -52,6 +52,26 @@ namespace DatabaseManagementTool
             {
                 this.CountryList.Items.Add(c.Name);
             }
+        }
+
+        private void FeedbackLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountryID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountryName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Helpers.SetControl(this, new AddCountryControl());
         }
     }
 }

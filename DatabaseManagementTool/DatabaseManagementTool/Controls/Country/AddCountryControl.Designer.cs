@@ -32,6 +32,7 @@
             this.CountryName = new System.Windows.Forms.TextBox();
             this.CountrySaveButton = new System.Windows.Forms.Button();
             this.FeedbackLabel = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // AddCountryControlTitle
@@ -68,10 +69,22 @@
             this.FeedbackLabel.Size = new System.Drawing.Size(0, 13);
             this.FeedbackLabel.TabIndex = 3;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(23, 169);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(89, 13);
+            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "View all countries";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // AddCountryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.FeedbackLabel);
             this.Controls.Add(this.CountrySaveButton);
             this.Controls.Add(this.CountryName);
@@ -89,5 +102,6 @@
         private System.Windows.Forms.TextBox CountryName;
         private System.Windows.Forms.Button CountrySaveButton;
         private System.Windows.Forms.Label FeedbackLabel;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
