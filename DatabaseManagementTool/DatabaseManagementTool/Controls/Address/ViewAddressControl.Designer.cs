@@ -87,6 +87,7 @@
             this.AddressList.Name = "AddressList";
             this.AddressList.Size = new System.Drawing.Size(120, 160);
             this.AddressList.TabIndex = 8;
+            this.AddressList.SelectedIndexChanged += new System.EventHandler(this.AddressList_SelectedIndexChanged);
             // 
             // AddressNumber
             // 

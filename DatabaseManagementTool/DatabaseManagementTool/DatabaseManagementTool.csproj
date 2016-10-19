@@ -159,10 +159,10 @@
     <Compile Include="Controls\Role\ViewRoleControl.Designer.cs">
       <DependentUpon>ViewRoleControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewAddressControl.cs">
+    <Compile Include="Controls\Address\ViewAddressControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ViewAddressControl.Designer.cs">
+    <Compile Include="Controls\Address\ViewAddressControl.Designer.cs">
       <DependentUpon>ViewAddressControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Controls\Address\AddAddressControl.resx">
@@ -213,7 +213,7 @@
     <EmbeddedResource Include="Controls\Role\ViewRoleControl.resx">
       <DependentUpon>ViewRoleControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewAddressControl.resx">
+    <EmbeddedResource Include="Controls\Address\ViewAddressControl.resx">
       <DependentUpon>ViewAddressControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -20,7 +20,7 @@ namespace DatabaseManagementTool
 
         private void AddressSaveButton_Click(object sender, EventArgs e)
         {
-            Address address = new Address { Number = AddressNumber.Text.ToString(), Street = AddressStreet.Text.ToString() };
+            Address address = new Address { Number = Int32.Parse(AddressNumber.Text), Street = AddressStreet.Text.ToString() };
             address.Create(address);
 
             FeedbackLabel.ForeColor = Color.ForestGreen;

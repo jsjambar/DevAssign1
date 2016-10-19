@@ -121,5 +121,35 @@ namespace DatabaseManagementTool
         {
             this.AddControlToPlaceHolder(new ViewAddressControl());
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddCountryControl());
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddRoleUserControl());
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddPostalCodeControl());
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddEmployeeControl());
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddProjectControl());
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddAddressUserControl());
+        }
     }
 }

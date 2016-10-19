@@ -12,14 +12,14 @@ namespace DatabaseManagementTool
     public class Address : ORM    {
         public int ID { get; set; }
         public string Street { get; set; }
-        public string Number { get; set; }
+        public int Number { get; set; }
 
         Database database = new Database();
 
         public void Create(object model)
         {
             Address insertable_address = new Address {Street = Street, Number = Number };
-            string create_address = $"INSERT INTO `addresses` (`name`, `street`) VALUES ('{insertable_address.Street}', '{insertable_address.Number}')";
+            string create_address = $"INSERT INTO `addresses` (`street`, `number`) VALUES ('{insertable_address.Street}', '{insertable_address.Number}')";
             this.database.DoQuery(create_address);
         }
 
@@ -43,7 +43,7 @@ namespace DatabaseManagementTool
 
             while (sql_data_reader.Read())
             {
-                address_list.Add(new Address { ID = sql_data_reader.GetInt32(0), Street = sql_data_reader.GetString(1), Number = sql_data_reader.GetString(2) });
+                address_list.Add(new Address { ID = sql_data_reader.GetInt32(0), Street = sql_data_reader.GetString(1), Number = sql_data_reader.GetInt32(2)});
             }
 
             sqlite_connection.Close();
@@ -58,7 +58,9 @@ namespace DatabaseManagementTool
 
         public void Update(object model)
         {
-            throw new NotImplementedException();
+            Address updated_address = new Address { ID = ID, Street = Street, Number = Number };
+            string update_address = $"UPDATE `addresses` SET `street` = '{updated_address.Street}', `number` = '{updated_address.Number}' WHERE `id` = {updated_address.ID}";
+            this.database.DoQuery(update_address);
         }
     }
 }

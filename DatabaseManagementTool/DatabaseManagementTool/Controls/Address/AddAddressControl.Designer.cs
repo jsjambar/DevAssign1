@@ -51,7 +51,7 @@
             this.AddressSaveButton.Name = "AddressSaveButton";
             this.AddressSaveButton.Size = new System.Drawing.Size(100, 23);
             this.AddressSaveButton.TabIndex = 6;
-            this.AddressSaveButton.Text = "Save country";
+            this.AddressSaveButton.Text = "Save address";
             this.AddressSaveButton.UseVisualStyleBackColor = true;
             this.AddressSaveButton.Click += new System.EventHandler(this.AddressSaveButton_Click);
             // 
