@@ -123,6 +123,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeAddress.cs" />
     <Compile Include="Models\ORM.cs" />
     <Compile Include="Models\PostalCode.cs" />
     <Compile Include="Models\Project.cs" />

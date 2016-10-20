@@ -21,6 +21,7 @@ namespace DatabaseManagementTool.Classes
             this.CreatePostalCodesTable();
             this.CreateRolesTable();
             this.CreateProjectsTable();
+            this.CreateEmployeeAddressesTable();
         }
 
         public static void CreateDatabase()
@@ -64,6 +65,12 @@ namespace DatabaseManagementTool.Classes
         {
             string create_projects_table = "CREATE TABLE IF NOT EXISTS `projects` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` STRING NOT NULL, `location` STRING NOT NULL, `budget` INT NOT NULL, `hours` INT NOT NULL, `boolean_deleted` BOOLEAN not null default 0)";
             this.Query(create_projects_table);
+        }
+
+        private void CreateEmployeeAddressesTable()
+        {
+            string create_employee_addresses_table = "CREATE TABLE IF NOT EXISTS `employee_addresses` ( `employee` INTEGER, `address` INTEGER, `postal_code` INTEGER, `country` INTEGER, FOREIGN KEY (`employee`) REFERENCES employees(bsn), FOREIGN KEY (`address`) REFERENCES addresses(id), FOREIGN KEY (`postal_code`) REFERENCES postal_codes(id), FOREIGN KEY (`country`) REFERENCES countries(id))";
+            this.DoQuery(create_employee_addresses_table);
         }
 
         public void DoQuery(string query)

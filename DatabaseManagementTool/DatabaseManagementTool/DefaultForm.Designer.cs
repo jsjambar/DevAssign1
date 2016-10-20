@@ -276,9 +276,9 @@
             // 
             // ControlPlaceholder
             // 
-            this.ControlPlaceholder.Location = new System.Drawing.Point(225, 24);
+            this.ControlPlaceholder.Location = new System.Drawing.Point(159, 24);
             this.ControlPlaceholder.Name = "ControlPlaceholder";
-            this.ControlPlaceholder.Size = new System.Drawing.Size(763, 371);
+            this.ControlPlaceholder.Size = new System.Drawing.Size(829, 371);
             this.ControlPlaceholder.TabIndex = 3;
             // 
             // linkLabel1
