@@ -14,25 +14,33 @@ namespace DatabaseManagementTool
 {
     public partial class AddProjectControl : UserControl
     {
-        string name;
-        string location;
-        string budget;
-        string hours;
-
         public AddProjectControl()
         {
             InitializeComponent();
-            Country country = new Country();
-            country.FindAll();
         }
 
         private void AddProjectButton_Click(object sender, EventArgs e)
         {
-            Project project = new Project { Name = ProjectName.Text, Location = "Test", Hours = Convert.ToInt32(ProjectHours.Text), Budget = Convert.ToInt32(ProjectBudget.Text) };
-            project.Create(project);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Helpers.SetControl(this, new ViewProjectsControl());
+        }
+
+        private void ProjectSaveButton_Click(object sender, EventArgs e)
+        {
+            Project project = new Project { Name = ProjectName.Text.ToString(), Budget = Int32.Parse(ProjectBudget.Text),  AllocatedHours = Int32.Parse(ProjectAllocatedHours.Text), CountryID = 1, AddressID = 1};
+            project.Create(project);
+
+            FeedbackLabel.ForeColor = Color.ForestGreen;
+            FeedbackLabel.Text = $"Project with name '{project.Name}' has been created and saved! This project has a budget of {project.Budget} and can be worked on for {project.AllocatedHours}.";
+
+            ProjectName.Text = "";
+            ProjectName.Focus();
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Helpers.SetControl(this, new ViewProjectsControl());
         }

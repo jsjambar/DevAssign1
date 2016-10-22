@@ -63,7 +63,7 @@ namespace DatabaseManagementTool.Classes
 
         private void CreateProjectsTable()
         {
-            string create_projects_table = "CREATE TABLE IF NOT EXISTS `projects` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` STRING NOT NULL, `location` STRING NOT NULL, `budget` INT NOT NULL, `hours` INT NOT NULL, `boolean_deleted` BOOLEAN not null default 0)";
+            string create_projects_table = "CREATE TABLE IF NOT EXISTS `projects` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` STRING NOT NULL, `location` STRING, `budget` INT NOT NULL, `hours` INT NOT NULL, `boolean_deleted` BOOLEAN not null default 0)";
             this.Query(create_projects_table);
         }
 
@@ -123,21 +123,21 @@ namespace DatabaseManagementTool.Classes
             return values;
         }
 
-        public List<Project> projectQuery (string sQuery)
-        {
-            SQLiteConnection sqlite_connection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
-            sqlite_connection.Open();
+        //public List<Project> projectQuery (string sQuery)
+        //{
+        //    SQLiteConnection sqlite_connection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
+        //    sqlite_connection.Open();
 
-            List<Project> values = new List<Project>();
+        //    List<Project> values = new List<Project>();
 
-            SQLiteCommand command = new SQLiteCommand(sQuery, sqlite_connection);
-            SQLiteDataReader result = command.ExecuteReader();
-            while (result.Read())
-            {
-                values.Add(new Project { Id = Convert.ToInt32(result["id"]), Name = result["name"].ToString(), Location = result["location"].ToString(), Budget = Convert.ToInt32(result["budget"]), Hours = Convert.ToInt32(result["hours"]) });
-            }
+        //    SQLiteCommand command = new SQLiteCommand(sQuery, sqlite_connection);
+        //    SQLiteDataReader result = command.ExecuteReader();
+        //    while (result.Read())
+        //    {
+        //        values.Add(new Project { Id = Convert.ToInt32(result["id"]), Name = result["name"].ToString(), Location = result["location"].ToString(), Budget = Convert.ToInt32(result["budget"]), Hours = Convert.ToInt32(result["hours"]) });
+        //    }
 
-            return values;
-        }
+        //    return values;
+        //}
     }
 }

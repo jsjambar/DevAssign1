@@ -8,57 +8,62 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DatabaseManagementTool.Models;
+using DatabaseManagementTool.Classes;
 
 namespace DatabaseManagementTool
 {
     public partial class ViewProjectsControl : UserControl
     {
-        Project oProject = new Project();
-        List<Project> projectslist = new List<Project>();
-        int current = 0;
+        Project Project = new Project();
 
         public ViewProjectsControl()
         {
             InitializeComponent();
-
-            List<Project> projects = (List<Project>)oProject.FindAll();
-
-            foreach (Project project in projects)
-            {
-                projectslist.Add(new Project { Id = project.Id, Name = project.Name, Location = project.Location, Budget = project.Budget, Hours = project.Hours });
-            }
-            
-            ProjectList.DisplayMember = "Name";
-            ProjectList.ValueMember = "Id";
-            ProjectList.DataSource = projectslist;
-    }
-
-        // To view the data before choosing whether you want to delete or edit
+            this.AddItemsToListBox();
+        }
         private void ProjectList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedId = ProjectList.SelectedIndex;
+            var project_list = this.Project.FindAll();
 
-            if(selectedId >= 0)
+            foreach (Project p in project_list)
             {
-                var values = projectslist[selectedId];
-                current = values.Id;
-
-                ProjectId.Text = values.Id.ToString();
-                ProjectName.Text = values.Name.ToString();
-                ProjectLocation.Text = values.Location.ToString();
-                ProjectBudget.Text = values.Budget.ToString();
-                ProjectHours.Text = values.Hours.ToString();
+                if (this.ProjectList.SelectedItem.ToString() == p.Name.ToString())
+                {
+                    this.ProjectId.Text = p.ID.ToString();
+                    this.ProjectName.Text = p.Name.ToString();
+                    this.ProjectBudget.Text = p.Budget.ToString();
+                    this.ProjectHours.Text = p.AllocatedHours.ToString();
+                }
             }
         }
 
         private void ProjectEdit_Click(object sender, EventArgs e)
         {
-            oProject.Update(new Project { Id = current, Name = ProjectName.Text, Location = ProjectLocation.Text, Budget = Convert.ToInt32(ProjectBudget.Text), Hours = Convert.ToInt32(ProjectHours.Text) });
+            Project project = new Project { ID = Int32.Parse(this.ProjectId.Text), Name = this.ProjectName.Text.ToString(), Budget = Int32.Parse(this.ProjectBudget.Text), AllocatedHours = Int32.Parse(ProjectHours.Text)};
+            project.Update(project);
+            this.AddItemsToListBox();
+
+            this.FeedbackLabel.ForeColor = Color.ForestGreen;
+            this.FeedbackLabel.Text = $"Updated project with {this.ProjectName.Text.ToString()}";
         }
 
         private void ProjectDelete_Click(object sender, EventArgs e)
         {
-            oProject.Delete(current);
+        }
+
+        private void AddItemsToListBox()
+        {
+            this.ProjectList.Items.Clear();
+
+            foreach (Project p in this.Project.FindAll())
+            {
+                this.ProjectList.Items.Add(p.Name);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Helpers.SetControl(this, new AddProjectControl());
         }
     }
 }

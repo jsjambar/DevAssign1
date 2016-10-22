@@ -151,5 +151,15 @@ namespace DatabaseManagementTool
         {
             this.AddControlToPlaceHolder(new AddAddressUserControl());
         }
+
+        private void addProjectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddProjectControl());
+        }
+
+        private void viewProjectsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new ViewProjectsControl());
+        }
     }
 }

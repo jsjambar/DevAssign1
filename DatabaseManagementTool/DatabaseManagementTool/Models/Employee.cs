@@ -2,6 +2,7 @@
 using DatabaseManagementTool.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,10 +43,20 @@ namespace DatabaseManagementTool
 
         public object FindAll()
         {
-            string getall_employee = "SELECT * FROM `employees` WHERE `boolean_deleted` = 0";
-            List<Employee> employees = database.employeeQuery(getall_employee);
+            SQLiteConnection sqlite_connection = new SQLiteConnection($"Data Source=DefaultDB.sqlite;Version=3;");
+            sqlite_connection.Open();
+            SQLiteCommand sqlite_command = new SQLiteCommand("SELECT * FROM `projects` ORDER BY `name`", sqlite_connection);
+            SQLiteDataReader sql_data_reader = sqlite_command.ExecuteReader();
+            List<object> project_list = new List<object>();
 
-            return employees;
+            while (sql_data_reader.Read())
+            {
+                project_list.Add(new Project { ID = sql_data_reader.GetInt32(0), Name = sql_data_reader.GetString(1), Budget = sql_data_reader.GetInt32(3), AllocatedHours = sql_data_reader.GetInt32(4) });
+            }
+
+            sqlite_connection.Close();
+
+            return project_list;
         }
 
         public object FindLast()

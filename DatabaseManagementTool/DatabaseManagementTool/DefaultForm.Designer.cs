@@ -61,6 +61,9 @@
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.projectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewProjectsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +101,7 @@
             this.postalCodesToolStripMenuItem,
             this.addressToolStripMenuItem,
             this.rolesToolStripMenuItem,
+            this.projectsToolStripMenuItem,
             this.viewProjectsToolStripMenuItem,
             this.viewEmployeesToolStripMenuItem,
             this.databaseToolStripMenuItem,
@@ -347,6 +351,29 @@
             this.linkLabel6.Text = "Create address";
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
+            // projectsToolStripMenuItem
+            // 
+            this.projectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewProjectsToolStripMenuItem1,
+            this.addProjectsToolStripMenuItem});
+            this.projectsToolStripMenuItem.Name = "projectsToolStripMenuItem";
+            this.projectsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.projectsToolStripMenuItem.Text = "Projects";
+            // 
+            // viewProjectsToolStripMenuItem1
+            // 
+            this.viewProjectsToolStripMenuItem1.Name = "viewProjectsToolStripMenuItem1";
+            this.viewProjectsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.viewProjectsToolStripMenuItem1.Text = "View projects";
+            this.viewProjectsToolStripMenuItem1.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem1_Click);
+            // 
+            // addProjectsToolStripMenuItem
+            // 
+            this.addProjectsToolStripMenuItem.Name = "addProjectsToolStripMenuItem";
+            this.addProjectsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addProjectsToolStripMenuItem.Text = "Add projects";
+            this.addProjectsToolStripMenuItem.Click += new System.EventHandler(this.addProjectsToolStripMenuItem_Click);
+            // 
             // DefaultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,6 +434,9 @@
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.ToolStripMenuItem projectsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewProjectsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addProjectsToolStripMenuItem;
     }
 }
 
