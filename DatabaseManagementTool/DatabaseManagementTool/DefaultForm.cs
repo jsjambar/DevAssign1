@@ -161,5 +161,10 @@ namespace DatabaseManagementTool
         {
             this.AddControlToPlaceHolder(new ViewProjectsControl());
         }
+
+        private void addEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.AddControlToPlaceHolder(new AddEmployeeControl());
+        }
     }
 }

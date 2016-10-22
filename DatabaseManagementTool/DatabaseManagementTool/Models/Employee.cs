@@ -23,7 +23,7 @@ namespace DatabaseManagementTool
         public void Create(object model)
         {
             Employee insertable_employee = new Employee { BSN = BSN, Name = Name, Surname = Surname, Address = Address, Education = Education, Job = Job };
-            string create_employee = $"INSERT INTO `employees` (`bsn`, `first_name`, `last_name`, `address`, `education`, `job`) VALUES ({BSN} ,'{Name}', '{Surname}', '{Address}', '{Education}', '{Job}')";
+            string create_employee = $"INSERT INTO `employees` (`bsn`, `first_name`, `last_name`, `address`, `education`, `job`) VALUES ({insertable_employee.BSN} ,'{insertable_employee.Name}', '{insertable_employee.Surname}', '{insertable_employee.Address}', '{insertable_employee.Education}', '{insertable_employee.Job}')";
             database.DoQuery(create_employee);
         }
 

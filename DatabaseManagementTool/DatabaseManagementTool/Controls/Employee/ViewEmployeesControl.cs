@@ -38,20 +38,6 @@ namespace DatabaseManagementTool
 
         private void EmployeesList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selectedId = EmployeesList.SelectedIndex;
-
-            if (selectedId >= 0)
-            {
-                var values = employeeslist[selectedId];
-                current = values.BSN;
-
-                EmployeeBSN.Text = values.BSN.ToString();
-                EmployeeFirstName.Text = values.Name.ToString();
-                EmployeeSurname.Text = values.Surname.ToString();
-                EmployeeAddress.Text = values.Address.ToString();
-                EmployeeEducation.Text = values.Education.ToString();
-                EmployeeJob.Text = values.Job.ToString();
-            }
         }
 
         private void EmployeeEdit_Click(object sender, EventArgs e)

@@ -45,10 +45,9 @@
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.projectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewProjectsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAllTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,9 +60,9 @@
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.projectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewProjectsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -102,10 +101,9 @@
             this.addressToolStripMenuItem,
             this.rolesToolStripMenuItem,
             this.projectsToolStripMenuItem,
-            this.viewProjectsToolStripMenuItem,
-            this.viewEmployeesToolStripMenuItem,
             this.databaseToolStripMenuItem,
-            this.informationToolStripMenuItem});
+            this.informationToolStripMenuItem,
+            this.employeesToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
             this.actionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.actionsToolStripMenuItem.Text = "Actions";
@@ -116,7 +114,7 @@
             this.addCountriesToolStripMenuItem,
             this.addCountriesToolStripMenuItem1});
             this.countryToolStripMenuItem.Name = "countryToolStripMenuItem";
-            this.countryToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.countryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.countryToolStripMenuItem.Text = "Country";
             // 
             // addCountriesToolStripMenuItem
@@ -140,7 +138,7 @@
             this.viewPostalCodesToolStripMenuItem,
             this.addPostalCodesToolStripMenuItem});
             this.postalCodesToolStripMenuItem.Name = "postalCodesToolStripMenuItem";
-            this.postalCodesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.postalCodesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.postalCodesToolStripMenuItem.Text = "Postal codes";
             // 
             // viewPostalCodesToolStripMenuItem
@@ -164,7 +162,7 @@
             this.viewAddressesToolStripMenuItem,
             this.addAddressesToolStripMenuItem});
             this.addressToolStripMenuItem.Name = "addressToolStripMenuItem";
-            this.addressToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.addressToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addressToolStripMenuItem.Text = "Address";
             // 
             // viewAddressesToolStripMenuItem
@@ -188,7 +186,7 @@
             this.viewRolesToolStripMenuItem,
             this.addRolesToolStripMenuItem});
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rolesToolStripMenuItem.Text = "Roles";
             // 
             // viewRolesToolStripMenuItem
@@ -206,39 +204,28 @@
             this.addRolesToolStripMenuItem.Text = "Add roles";
             this.addRolesToolStripMenuItem.Click += new System.EventHandler(this.addRolesToolStripMenuItem_Click);
             // 
-            // viewProjectsToolStripMenuItem
+            // projectsToolStripMenuItem
             // 
-            this.viewProjectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addProjectToolStripMenuItem});
-            this.viewProjectsToolStripMenuItem.Name = "viewProjectsToolStripMenuItem";
-            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.viewProjectsToolStripMenuItem.Text = "View projects";
-            this.viewProjectsToolStripMenuItem.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem_Click);
+            this.projectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewProjectsToolStripMenuItem1,
+            this.addProjectsToolStripMenuItem});
+            this.projectsToolStripMenuItem.Name = "projectsToolStripMenuItem";
+            this.projectsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.projectsToolStripMenuItem.Text = "Projects";
             // 
-            // addProjectToolStripMenuItem
+            // viewProjectsToolStripMenuItem1
             // 
-            this.addProjectToolStripMenuItem.Name = "addProjectToolStripMenuItem";
-            this.addProjectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.addProjectToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.addProjectToolStripMenuItem.Text = "Add project";
-            this.addProjectToolStripMenuItem.Click += new System.EventHandler(this.addProjectToolStripMenuItem_Click);
+            this.viewProjectsToolStripMenuItem1.Name = "viewProjectsToolStripMenuItem1";
+            this.viewProjectsToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.viewProjectsToolStripMenuItem1.Text = "View projects";
+            this.viewProjectsToolStripMenuItem1.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem1_Click);
             // 
-            // viewEmployeesToolStripMenuItem
+            // addProjectsToolStripMenuItem
             // 
-            this.viewEmployeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addEmployeeToolStripMenuItem});
-            this.viewEmployeesToolStripMenuItem.Name = "viewEmployeesToolStripMenuItem";
-            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.viewEmployeesToolStripMenuItem.Text = "View employees";
-            this.viewEmployeesToolStripMenuItem.Click += new System.EventHandler(this.viewEmployeesToolStripMenuItem_Click);
-            // 
-            // addEmployeeToolStripMenuItem
-            // 
-            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.addEmployeeToolStripMenuItem.Text = "Add employee";
-            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
+            this.addProjectsToolStripMenuItem.Name = "addProjectsToolStripMenuItem";
+            this.addProjectsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.addProjectsToolStripMenuItem.Text = "Add projects";
+            this.addProjectsToolStripMenuItem.Click += new System.EventHandler(this.addProjectsToolStripMenuItem_Click);
             // 
             // databaseToolStripMenuItem
             // 
@@ -246,7 +233,7 @@
             this.createDatabaseToolStripMenuItem,
             this.createAllTablesToolStripMenuItem});
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
-            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.databaseToolStripMenuItem.Text = "Database";
             // 
             // createDatabaseToolStripMenuItem
@@ -266,7 +253,7 @@
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
@@ -351,28 +338,27 @@
             this.linkLabel6.Text = "Create address";
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
-            // projectsToolStripMenuItem
+            // employeesToolStripMenuItem
             // 
-            this.projectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewProjectsToolStripMenuItem1,
-            this.addProjectsToolStripMenuItem});
-            this.projectsToolStripMenuItem.Name = "projectsToolStripMenuItem";
-            this.projectsToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.projectsToolStripMenuItem.Text = "Projects";
+            this.employeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewEmployeesToolStripMenuItem,
+            this.addEmployeesToolStripMenuItem});
+            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
+            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.employeesToolStripMenuItem.Text = "Employees";
             // 
-            // viewProjectsToolStripMenuItem1
+            // viewEmployeesToolStripMenuItem
             // 
-            this.viewProjectsToolStripMenuItem1.Name = "viewProjectsToolStripMenuItem1";
-            this.viewProjectsToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.viewProjectsToolStripMenuItem1.Text = "View projects";
-            this.viewProjectsToolStripMenuItem1.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem1_Click);
+            this.viewEmployeesToolStripMenuItem.Name = "viewEmployeesToolStripMenuItem";
+            this.viewEmployeesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.viewEmployeesToolStripMenuItem.Text = "View employees";
             // 
-            // addProjectsToolStripMenuItem
+            // addEmployeesToolStripMenuItem
             // 
-            this.addProjectsToolStripMenuItem.Name = "addProjectsToolStripMenuItem";
-            this.addProjectsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addProjectsToolStripMenuItem.Text = "Add projects";
-            this.addProjectsToolStripMenuItem.Click += new System.EventHandler(this.addProjectsToolStripMenuItem_Click);
+            this.addEmployeesToolStripMenuItem.Name = "addEmployeesToolStripMenuItem";
+            this.addEmployeesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.addEmployeesToolStripMenuItem.Text = "Add employees";
+            this.addEmployeesToolStripMenuItem.Click += new System.EventHandler(this.addEmployeesToolStripMenuItem_Click);
             // 
             // DefaultForm
             // 
@@ -406,15 +392,11 @@
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem actionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewEmployeesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
         private System.Windows.Forms.Label ScreenInformation;
         private System.Windows.Forms.FlowLayoutPanel ControlPlaceholder;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createDatabaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewProjectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addProjectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createAllTablesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem countryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCountriesToolStripMenuItem;
@@ -437,6 +419,9 @@
         private System.Windows.Forms.ToolStripMenuItem projectsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewProjectsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem addProjectsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addEmployeesToolStripMenuItem;
     }
 }
 
